@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Max Face Dental - Smile Gallery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "deep-blue": "#1E3A8A",
+                        "teal-accent": "#14B8A6",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#111621",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Navigation -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex h-20 items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined text-2xl">dentistry</span>
+</div>
+<span class="text-xl font-bold tracking-tight text-deep-blue dark:text-white">Max Face Dental</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Treatments</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">About</a>
+<a class="text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden sm:flex items-center justify-center rounded-full bg-primary px-6 py-2.5 text-sm font-bold text-white hover:bg-deep-blue transition-all shadow-lg shadow-primary/20">
+                        Book Now
+                    </button>
+<button class="md:hidden text-slate-600 dark:text-slate-300">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Minimalist Hero Section -->
+<section class="relative py-20 lg:py-32 overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-b from-primary/5 to-transparent -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+<div class="inline-flex items-center gap-2 rounded-full bg-teal-accent/10 px-4 py-1.5 text-teal-accent mb-6">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span class="text-xs font-bold uppercase tracking-wider">Proven Results</span>
+</div>
+<h1 class="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
+                    Smile Gallery <span class="text-primary">Transformations</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
+                    Discover the life-changing results of our premium dental procedures. From subtle enhancements to full restorative journeys, see how we rebuild confidence.
+                </p>
+</div>
+</section>
+<!-- Filtering System -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+<div class="flex flex-wrap items-center justify-center gap-3">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-primary text-white font-semibold shadow-md">
+                    All Cases
+                </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-semibold hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-lg text-teal-accent">precision_manufacturing</span>
+                    Dental Implants
+                </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-semibold hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-lg text-teal-accent">align_horizontal_center</span>
+                    Invisalign
+                </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-semibold hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-lg text-teal-accent">villa</span>
+                    Veneers
+                </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-semibold hover:border-primary/50 transition-all">
+<span class="material-symbols-outlined text-lg text-teal-accent">flare</span>
+                    Whitening
+                </button>
+</div>
+</section>
+<!-- Before/After Cards Grid -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 flex">
+<div class="w-1/2 relative">
+<div class="absolute top-2 left-2 z-10 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">Before</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up photo of crooked teeth before treatment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAyp8c9nOCjRo-Em-dQ6_rGefL3RcvD9Pl40JX1d_YtLtiaz4yjcFuBLBW1a6X5xk5p8W-7VHILkhaOb63s9N9OaEcjBD2AuHR4SDvyg_NLGiRw9zIoC9mwtlUJnxZonX9VrxN3_zCSIHml3GSv9c9GsorlPkV5T6ZId3p_oQwIAIoLC-e-Z_M6pFYXqRB22sbHxs13pa1wJrZBRKGOoXPb3jfcHlJM5UckkwTZpSXstso2UIoH8NzUuqnzmjD0xtQb37boJ-5Wkg0");'></div>
+</div>
+<div class="w-1/2 relative border-l-2 border-white">
+<div class="absolute top-2 right-2 z-10 bg-primary/80 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">After</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Close up photo of perfect white straight teeth after treatment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDRcJr-ObFqddLdBYbb89JGhV8pmI-gGuusSAHbCARs7fWhKJ-xzShSyzQGGMwy4H0YRReuf3PQIcF2mlZnf-UIOVLPwYMdqNxiAYS2Lk-NcNPG95SUANDk6Kr5c5sr4je8YoL1d3vY5s_RKk0aNObX25FU5FgjCWLCX7CfoC2CQieevS-GdGPCShtTrfyCKxrPuHB1mU2Dkbew-ptojofBggHIbizUNN1q_G6_iW4VsKjEwG_xLA8T1ZdiCtJDHIhF5NFVJ8aRhXo");'></div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-teal-accent uppercase tracking-tighter">Cosmetic Reconstruction</span>
+<span class="text-xs font-medium text-slate-400 italic">Case #4021</span>
+</div>
+<h3 class="text-lg font-bold text-deep-blue dark:text-white mb-2">Full Arch Porcelain Veneers</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Complete aesthetic overhaul for a patient with severe discoloration and misalignment.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                                2 Weeks
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">payments</span>
+                                Financing Available
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 flex">
+<div class="w-1/2 relative">
+<div class="absolute top-2 left-2 z-10 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">Before</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Image of gapped teeth before invisalign treatment" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB20mrE5F6qavwpYkP4N8oql7RYooSOeEMIUq260mJcWz9LlPeI-sR_R0rowC4ZgY_bUymq67X4vviayvZXQYJ4lRzKsJaQj3oqzEJBZy4q5Wa4JmGkVZB7sI07q2Tu4alWx7fZDq715PVT6ZhTsa07k4iqgmXPN-3JBFYufp2dXLdaY264Py9CZgu5duQmCyIGKdOQJHYFO7S0YIQKD0I6WDlb16SVkJ7Ld7Piu_vSOTMaapg-D0T6TY4XzV9HFtPl2vFuPtEae3U");'></div>
+</div>
+<div class="w-1/2 relative border-l-2 border-white">
+<div class="absolute top-2 right-2 z-10 bg-primary/80 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">After</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Image of perfect teeth alignment after invisalign" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNdpBaE9MGRSVtOMxW37y3vztIEUSZlS1dR2x-GrbEMqx6xEJG-vp4h8Iit6KN-NlLJdOpw4tB8ue7sqMBP8CY0dLAuoTelTuy-GgrWmfQCZluTZU3JujwptKU2e070dgCeql62nmLlsIBT-haF6X3fOl71C-2bNr8ToNG8xVMxRMUqIOvFSirTo4Mm7pulWxFnITpa12aAyVRyJ6VQcpBYENdlko3rtZ-lj2Z7izxGVnQlrfCa0o6TxoP774QfULp5UJM0WL0IrY");'></div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-teal-accent uppercase tracking-tighter">Orthodontics</span>
+<span class="text-xs font-medium text-slate-400 italic">Case #3988</span>
+</div>
+<h3 class="text-lg font-bold text-deep-blue dark:text-white mb-2">Advanced Invisalign Journey</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Corrected severe spacing and bite issues without the use of traditional metal braces.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                                9 Months
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">verified</span>
+                                Platinum Provider
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 flex">
+<div class="w-1/2 relative">
+<div class="absolute top-2 left-2 z-10 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">Before</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Image showing missing back teeth for implant case" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBusXa3uxhe6k_UCGieXxXNqKLwl6OLkViIxe08OPFMQLJy2DgoQ9E6qUltkQWnaIjtwWnuh-kETpB2wAF6cJNh-9ScMHVTHxy8j_MUq5SejF08TK3KswrU6y1y0FhiLhPJ48yNZBhwwjjw8kOpQZRFlrqk07dFcSQt1QC2cWVUTInaTy7k59nAvXsZKMTT6gH4GZ4AnA5nHghPKuRnwy5TZ3TWnwbx8coyzC4j8nbqPHWSW-y8gqDVkiITS1CYElAaHApIwX-NYp8");'></div>
+</div>
+<div class="w-1/2 relative border-l-2 border-white">
+<div class="absolute top-2 right-2 z-10 bg-primary/80 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">After</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Complete smile with full dental implants restored" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCna219KCp7fihErlx3ZnaCJ7dPRWFYd39EEe8xB6wBKCEPEy3ONusl97561FU6D1U1VXzG-65p9-cARd5tQo688qyjbSbGEweD8bsl5401Kz9HJSH0VNYumzuWtMofG8oJcrKxxv8dmwFoURUXE5oqrH7zg5UoW40UjUOYeJj5PrD9Z6aX80lFcYOMd_7LMypcvUcgkA_0Ibt4eZZVOtP6RuzpSdZ-pC9y4v-Pww14f-B_kwsJa7Ci_JYewd4uNe3SdS_A1B9aSME");'></div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-teal-accent uppercase tracking-tighter">Restorative</span>
+<span class="text-xs font-medium text-slate-400 italic">Case #5102</span>
+</div>
+<h3 class="text-lg font-bold text-deep-blue dark:text-white mb-2">Full Mouth Implants</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Life-changing full mouth restoration using the latest titanium implant technology.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                                6 Months
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">biotech</span>
+                                3D Guided Surgery
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 flex">
+<div class="w-1/2 relative">
+<div class="absolute top-2 left-2 z-10 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">Before</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Stained and yellow teeth before whitening" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDfeM7yyQ9CbGnZc-7Sn_NN0Oby4M6Ojf-Ciz3VwONxfpUsG4elk1Aa9vYmzKfB3eMuTD3p7prs3Y_AH2DEQQdRaBuTyk9z8PziqURtXRKSFEzeoVCuROeLZ-vFCJqUk3SUanPkRI-6aeyWmSOfLvjfF-o3IGIBXYMmTCpyOTQN-9lay30X3tfW_T0uXcUqJU-guIUdATc8pBAA1GAUr6-3SpEbpY2TGJcSlnkHeuF2SE3Sx5SH6a3J7woiniWrjnkrec3XLWd2kEk");'></div>
+</div>
+<div class="w-1/2 relative border-l-2 border-white">
+<div class="absolute top-2 right-2 z-10 bg-primary/80 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">After</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Bright white teeth after professional whitening" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDdScsVFquNXRbBXq_Zl4kvNXgW5bZggbOXoYD2CBhocGtCs362nasspZkizgNhdaXoXb3SNE7JFtmPOuNj-JIEoY3ZJpb7YKCOC8qpDO6HcfUwwN_LKFQE2i13i98FehVC7Ipi4kuyxVlK9822PuVXBM9D52-YcMHGLrGxqSxZR1FZFlynBiWMfogfpcOhZnB_9L3lyazEJ566ZEfcpR7-I-1Ps__cxWVCRiH21Wy45Ik_sVLc58rJQzO3L5ZRI16ECu-MJtQKtbA");'></div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-teal-accent uppercase tracking-tighter">Cosmetic</span>
+<span class="text-xs font-medium text-slate-400 italic">Case #2211</span>
+</div>
+<h3 class="text-lg font-bold text-deep-blue dark:text-white mb-2">Laser Teeth Whitening</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Professional medical-grade whitening for a 10-shade improvement in a single session.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                                90 Mins
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">bolt</span>
+                                Pain Free
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 flex">
+<div class="w-1/2 relative">
+<div class="absolute top-2 left-2 z-10 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">Before</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Chipped front tooth before dental bonding" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBGl5WXOgQEGSfmHODI9B6b1z5j5_yoAh6TmERsDWYmctOssdyGOzmM04lEggIjpo6gsJ3z0QWe68NEgB-1FRvg4A2VZsXBCLbQCya8X_GdxknAKTn-wBxF-DTVpSM5aOXu_IXS-Qd4OGKU80tT_oSBigH0wWa0pm1lxfzQqNP499CVFRoiNjwJyVBmw5pP14318nN758pJQLIiE3Nu5gDMqmJouwexu3rzqvRP8d5kB7zMEzKDDMMQjqK75ONrGWu7yFtsXm5pXIE");'></div>
+</div>
+<div class="w-1/2 relative border-l-2 border-white">
+<div class="absolute top-2 right-2 z-10 bg-primary/80 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">After</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Seamlessly repaired chipped tooth with bonding" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCnm0UeoXB8NZii7B2kdV2L4Kh0YIxkqg8mFEBgdho09SlNb7nDXQcbrHXirrbnGv6ScnnXE84stfkT0k03jgpa9EChSEG8SNDtEk1rALoZgNYF4Kuo99OaTlcAFiuGwVdEU3ZdxV0HanJlQ9WcaclYpNWiFYo6NR5DyIoa7gzmNSRgjD4qT99GgX43oYjLWzlJpwfj2hvZiJ5KElc3rw3k06ECJRdR9chptXa7moa3CLarCmbnCD4f3SFVsg_DbTJt0AhLtZFM7j4");'></div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-teal-accent uppercase tracking-tighter">Restoration</span>
+<span class="text-xs font-medium text-slate-400 italic">Case #1043</span>
+</div>
+<h3 class="text-lg font-bold text-deep-blue dark:text-white mb-2">Composite Bonding</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">Restored a chipped central incisor with multi-layered composite for a natural look.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                                45 Mins
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">palette</span>
+                                Perfect Match
+                            </div>
+</div>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="group bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-100 dark:border-slate-800 shadow-sm hover:shadow-xl transition-all duration-300">
+<div class="relative aspect-[4/3] overflow-hidden">
+<div class="absolute inset-0 flex">
+<div class="w-1/2 relative">
+<div class="absolute top-2 left-2 z-10 bg-slate-900/60 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">Before</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Complex case with multiple dental issues before full makeover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAvo6gaUc0XBnJyrIHMEaoAr8lrTshG-9YtJB34qe7LUQrATUlSjs_nreRR7Vf-YYZzWL2-h4uy644dORV5dETNWirY8dvC7CMuHwiGCtQKDMcoex35u9URfTApwsHXqTstNL_uxTJVV7UJxiS9ZArSlrshyLgXIEohEp3VgXcoadNe1DuZuQLm_fntCv-QFYlYY2x4rjZzaKiLM8mVrQ4y8sG93vn7rfwyolPrRfLIvsWEPkVTCQ7vqg1Q5p4VvLHc9mXWAzAb-U8");'></div>
+</div>
+<div class="w-1/2 relative border-l-2 border-white">
+<div class="absolute top-2 right-2 z-10 bg-primary/80 backdrop-blur-sm text-white text-[10px] px-2 py-0.5 rounded font-bold uppercase tracking-widest">After</div>
+<div class="w-full h-full bg-cover bg-center" data-alt="Perfect Hollywood smile after complete dental makeover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxC3y7TlSM6Qk_HpPobxK9X3cTMrI6JlsL-gyCZPktLJsidzFRyO7ZwuVnqJ0J6RYeb0ofHTUs_EODfDIycGN5shd5DTASS9sgJ32oD7s37c_opnLKOwGQR0pQKrMypVP-uu3bZ8JDGGIhLNE48iLEC44hvEXL-7U0N-xI-tIrPb3jlew6MdOQ9FGdvEz8bQ52Rv0orgs__PyOnCsZH_bZqM95SNKD72ZRka4-p7YPdr2ozjhn7pFlc9qW59WK9XwAUEzqHfbvkSA");'></div>
+</div>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<span class="text-xs font-bold text-teal-accent uppercase tracking-tighter">Full Reconstruction</span>
+<span class="text-xs font-medium text-slate-400 italic">Case #7712</span>
+</div>
+<h3 class="text-lg font-bold text-deep-blue dark:text-white mb-2">Total Smile Makeover</h3>
+<p class="text-sm text-slate-500 dark:text-slate-400 mb-4">A combination of implants, veneers, and tissue recontouring for a life-changing smile.</p>
+<div class="flex items-center gap-4 text-xs font-semibold text-slate-700 dark:text-slate-300">
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">schedule</span>
+                                12 Months
+                            </div>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary">groups</span>
+                                Multidisciplinary
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- High-impact CTA Section -->
+<section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+<div class="relative rounded-3xl overflow-hidden bg-deep-blue p-8 md:p-16 text-center text-white">
+<div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+<div class="absolute -top-24 -left-24 w-64 h-64 bg-teal-accent/20 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-64 h-64 bg-primary/30 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<h2 class="text-3xl md:text-5xl font-extrabold mb-6 leading-tight">Ready for your own <br/> transformation?</h2>
+<p class="max-w-xl mx-auto text-blue-100 text-lg mb-10">
+                        Schedule a comprehensive consultation today. Our specialists will create a customized treatment plan tailored to your smile goals.
+                    </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<button class="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-xl shadow-primary/25 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">calendar_today</span>
+                            Book Your Consultation
+                        </button>
+<button class="w-full sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl transition-all backdrop-blur-sm border border-white/20">
+                            View More Cases
+                        </button>
+</div>
+<div class="mt-12 flex items-center justify-center gap-6">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-deep-blue bg-slate-300 overflow-hidden">
+<div class="w-full h-full bg-cover" data-alt="Portrait of satisfied patient 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuALgO7l-Tjx9qp2Fpexvzl4CsENVi5xDb_deSM_cEva2rY8yPY5Yljj1aThIE4tkv0L2VSI6HcFRZPD6PvvFH4_3rrTZl4uMkmCzYADPHjYfPuYvGroWXNux_9LjFO_L608M5Qd4MMIvTJk-gHa1i62JcfxAVpEtPDLdWqtDovgYx-pZdBAXAnTxC3v3hEM-XOPwwbI5GSI8UTC0azsBh2oSA3kRMa-uiYy6PH2m3kiDlM1Q_lQFf86UGwfceair7K4wU92HQq_3SQ");'></div>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-deep-blue bg-slate-300 overflow-hidden">
+<div class="w-full h-full bg-cover" data-alt="Portrait of satisfied patient 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3kx1Dq8y1csrLt3tL79M8Ze6M2nkAYpuS67b32iQ03NQb6VFXyh9c_iaGcic5Bhu4hD3ER1sUThqT9ik808Qg5edLPlroLubtMdMCfiniObZz5pPzFnLdGDNfLIxDz8sIsXzv2IVDo6rOUfiMl3_FRv0ZzMlP6ykuK9CZMtmfJJu22sXU3KhBMIGj76nENpem50Hsmz_eEOSEDWjd__Kx6xWL_6b3oUzkfvbhBmUhGeD64ue5t4odNoirbtS8lUmiBZqPb6_KhG4");'></div>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-deep-blue bg-slate-300 overflow-hidden">
+<div class="w-full h-full bg-cover" data-alt="Portrait of satisfied patient 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBcqREvoopp1dScLOgyBM_y5wBBv6sTpw6oEkydj8QF34lRxn9wMxE6FWdhEDxd_OIF1xDDOVLviqD72nxFj8paYXygkdhPEwNJ23D-PiSdxGyTX5X8rySPn4KrzsJWc3Sb5k_hB0mphavOMdRTi424h_fADWABdJ7reN7rP-PLg1Y_10zrA5it4pDn5wMJf9PwTDQda-79FKnmEDwJkRYpHFwa02e-BMvmnnPHSApXlqg8cKARhHq8xcbTBLgrKWdN4Pj0y2VByIg");'></div>
+</div>
+</div>
+<p class="text-sm font-medium text-blue-200">Joined by 2,000+ happy patients</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-white dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 py-12">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row items-center justify-between gap-8">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-xl">dentistry</span>
+</div>
+<span class="text-lg font-bold tracking-tight text-deep-blue dark:text-white">Max Face Dental</span>
+</div>
+<div class="flex gap-8">
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share_reviews</span></a>
+<a class="text-slate-500 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">alternate_email</span></a>
+</div>
+<p class="text-sm text-slate-500">© 2024 Max Face Dental. All rights reserved.</p>
+</div>
+</div>
+</footer>
+</body></html>

@@ -1,0 +1,195 @@
+'use client'
+import Link from 'next/link'
+
+export default function HeroSection() {
+  return (
+    <section style={{
+      position:'relative', paddingTop:'160px', paddingBottom:'96px',
+      overflow:'hidden', background:'#f8fafc'
+    }}>
+      {/* Background blobs */}
+      <div style={{position:'absolute', top:'-10%', right:'-5%', width:'600px', height:'600px', borderRadius:'50%', background:'rgba(36,99,235,0.08)', filter:'blur(80px)', pointerEvents:'none'}}/>
+      <div style={{position:'absolute', bottom:'10%', right:'15%', width:'400px', height:'400px', borderRadius:'50%', background:'rgba(20,184,166,0.08)', filter:'blur(60px)', pointerEvents:'none'}}/>
+
+      <div style={{maxWidth:'1280px', margin:'0 auto', padding:'0 24px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'center'}}>
+
+        {/* Left */}
+        <div>
+          <div style={{
+            display:'inline-flex', alignItems:'center', gap:'8px',
+            padding:'6px 14px', borderRadius:'9999px',
+            background:'rgba(36,99,235,0.08)', border:'1px solid rgba(36,99,235,0.15)',
+            color:'#2463eb', fontSize:'11px', fontWeight:'700',
+            letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:'28px'
+          }}>
+            <span style={{width:'6px', height:'6px', borderRadius:'50%', background:'#2463eb', display:'inline-block'}}/>
+            Now Accepting Digital Referrals
+          </div>
+
+          <h1 style={{
+            fontSize:'clamp(42px, 5vw, 68px)', fontWeight:'900',
+            lineHeight:'1.05', letterSpacing:'-2px',
+            color:'#0f172a', marginBottom:'24px'
+          }}>
+            Precision care<br/>
+            for your{' '}
+            <span style={{
+              background:'linear-gradient(to right, #2463eb, #14b8a6)',
+              WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'
+            }}>
+              Maxillofacial
+            </span>{' '}
+            health.
+          </h1>
+
+          <p style={{
+            fontSize:'17px', color:'#64748b', lineHeight:'1.75',
+            marginBottom:'40px', maxWidth:'480px'
+          }}>
+            Experience world-class dental implants and reconstructive surgery at Kasturi Nagar, Bangalore. Led by Dr. B Srinivas Rao — certified implantologist trained at Branemark Osseointegration Center, Sweden.
+          </p>
+
+          <div style={{display:'flex', gap:'14px', flexWrap:'wrap', marginBottom:'48px'}}>
+            <Link href="/appointment" style={{
+              background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
+              color:'white', padding:'15px 32px', borderRadius:'12px',
+              textDecoration:'none', fontSize:'15px', fontWeight:'700',
+              boxShadow:'0 8px 24px rgba(36,99,235,0.3)',
+              transition:'all 0.2s', display:'inline-block'
+            }}
+              onMouseEnter={e => { e.currentTarget.style.transform = 'translateY(-2px)'; e.currentTarget.style.boxShadow = '0 12px 32px rgba(36,99,235,0.4)' }}
+              onMouseLeave={e => { e.currentTarget.style.transform = 'translateY(0)'; e.currentTarget.style.boxShadow = '0 8px 24px rgba(36,99,235,0.3)' }}
+            >
+              Start Your Journey
+            </Link>
+            <a href="tel:+919980477725" style={{
+              background:'white',
+              border:'1.5px solid #e2e8f0',
+              color:'#0f172a', padding:'15px 32px',
+              borderRadius:'12px', textDecoration:'none',
+              fontSize:'15px', fontWeight:'700',
+              display:'inline-flex', alignItems:'center', gap:'8px',
+              boxShadow:'0 2px 8px rgba(0,0,0,0.06)', transition:'all 0.2s'
+            }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = '#dbeafe'; e.currentTarget.style.color = '#2463eb' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.color = '#0f172a' }}
+            >
+              📞 +91 99804 77725
+            </a>
+          </div>
+
+          {/* Stats */}
+          <div style={{display:'flex', gap:'32px', paddingTop:'32px', borderTop:'1px solid #e2e8f0'}}>
+            {[
+              { value:'5,000+', label:'Patients Treated' },
+              { value:'8+',     label:'Years Experience' },
+              { value:'4.9★',   label:'Google Rating' },
+            ].map(stat => (
+              <div key={stat.label}>
+                <div style={{fontSize:'24px', fontWeight:'900', color:'#0f172a', letterSpacing:'-1px'}}>{stat.value}</div>
+                <div style={{fontSize:'12px', color:'#94a3b8', fontWeight:'500', marginTop:'2px'}}>{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        {/* Right */}
+        <div style={{position:'relative'}}>
+
+          {/* Main image */}
+          <div style={{borderRadius:'28px', overflow:'hidden', boxShadow:'0 40px 80px rgba(36,99,235,0.15)', aspectRatio:'1/1'}}>
+            <img
+              src="/Dentistry.jpg"
+              alt="Maxface Dental Clinic"
+              style={{width:'100%', height:'100%', objectFit:'cover', transition:'transform 0.5s'}}
+              onMouseEnter={e => e.target.style.transform = 'scale(1.03)'}
+              onMouseLeave={e => e.target.style.transform = 'scale(1)'}
+              onError={e => {
+                e.target.src = 'https://images.unsplash.com/photo-1588776814546-1ffedbe47425?w=600&h=600&fit=crop&auto=format'
+              }}
+            />
+          </div>
+
+          {/* Floating card - top right */}
+          <div style={{
+            position:'absolute', top:'-20px', right:'-20px',
+            background:'rgba(255,255,255,0.92)',
+            backdropFilter:'blur(12px)',
+            border:'1px solid rgba(255,255,255,0.6)',
+            borderRadius:'16px', padding:'16px 20px',
+            boxShadow:'0 8px 32px rgba(0,0,0,0.08)',
+            maxWidth:'190px'
+          }}>
+            <div style={{display:'flex', alignItems:'center', gap:'8px', marginBottom:'6px'}}>
+              <div style={{width:'32px', height:'32px', background:'rgba(20,184,166,0.1)', borderRadius:'8px', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'16px'}}>
+                ✅
+              </div>
+              <span style={{fontWeight:'800', fontSize:'11px', textTransform:'uppercase', letterSpacing:'0.5px', color:'#0f172a'}}>
+                Gold Standard
+              </span>
+            </div>
+            <p style={{fontSize:'11px', color:'#94a3b8', lineHeight:'1.5'}}>
+              Accredited Maxillofacial Implant Center — Branemark, Sweden
+            </p>
+          </div>
+
+          {/* Floating card - bottom left */}
+          <div style={{
+            position:'absolute', bottom:'-24px', left:'-24px',
+            background:'rgba(255,255,255,0.95)',
+            backdropFilter:'blur(12px)',
+            border:'1px solid rgba(255,255,255,0.6)',
+            borderRadius:'16px', padding:'20px',
+            boxShadow:'0 8px 32px rgba(0,0,0,0.08)',
+            width:'230px'
+          }}>
+            <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'12px'}}>
+              <span style={{fontSize:'13px', fontWeight:'800', color:'#0f172a'}}>Next Availability</span>
+              <span style={{
+                background:'rgba(36,99,235,0.08)', color:'#2463eb',
+                padding:'3px 8px', borderRadius:'6px',
+                fontSize:'10px', fontWeight:'700', letterSpacing:'0.5px'
+              }}>
+                LIVE
+              </span>
+            </div>
+            <div style={{
+              background:'#f8fafc', borderRadius:'10px', padding:'10px',
+              marginBottom:'10px', display:'flex', alignItems:'center', gap:'10px',
+              border:'1px solid #f1f5f9'
+            }}>
+              <span style={{fontSize:'18px'}}>📅</span>
+              <div>
+                <div style={{fontSize:'12px', fontWeight:'700', color:'#0f172a'}}>Mon – Sat</div>
+                <div style={{fontSize:'11px', color:'#94a3b8'}}>9:00 AM – 8:00 PM</div>
+              </div>
+            </div>
+            <Link href="/appointment" style={{
+              display:'block', textAlign:'center',
+              background:'linear-gradient(135deg, #0f172a, #1e3a8a)',
+              color:'white', padding:'9px', borderRadius:'8px',
+              textDecoration:'none', fontSize:'12px', fontWeight:'700',
+              letterSpacing:'0.3px'
+            }}>
+              Claim Slot →
+            </Link>
+          </div>
+
+          {/* Floating card - middle right */}
+          <div style={{
+            position:'absolute', top:'45%', right:'-32px',
+            background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
+            borderRadius:'14px', padding:'14px 18px',
+            boxShadow:'0 8px 24px rgba(36,99,235,0.3)',
+            color:'white'
+          }}>
+            <div style={{fontSize:'22px', fontWeight:'900', letterSpacing:'-1px'}}>4.9 ★</div>
+            <div style={{fontSize:'11px', opacity:0.85, marginTop:'2px'}}>Google Rating</div>
+            <div style={{fontSize:'10px', opacity:0.7}}>500+ reviews</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  )
+}

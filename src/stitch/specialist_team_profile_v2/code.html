@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563eb",
+                        "deep-blue": "#1E3A8A",
+                        "teal-accent": "#14B8A6",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#0F172A",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 antialiased">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 bg-white/80 backdrop-blur-md dark:border-slate-800 dark:bg-background-dark/80">
+<div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-12">
+<div class="flex items-center gap-3">
+<div class="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-white">
+<span class="material-symbols-outlined">health_and_safety</span>
+</div>
+<h2 class="text-xl font-extrabold tracking-tight text-deep-blue dark:text-white">Max Face <span class="text-primary">Dental</span></h2>
+</div>
+<nav class="hidden md:flex items-center gap-10">
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300 dark:hover:text-primary" href="#">Our Doctors</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300 dark:hover:text-primary" href="#">Specialties</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300 dark:hover:text-primary" href="#">Technology</a>
+<a class="text-sm font-semibold text-slate-600 hover:text-primary transition-colors dark:text-slate-300 dark:hover:text-primary" href="#">Patient Care</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:flex h-10 items-center justify-center rounded-lg px-5 text-sm font-bold text-primary hover:bg-primary/10 transition-all">
+                    Member Login
+                </button>
+<button class="flex h-10 items-center justify-center rounded-lg bg-primary px-6 text-sm font-bold text-white shadow-lg shadow-primary/25 hover:bg-deep-blue transition-all">
+                    Contact Us
+                </button>
+</div>
+</div>
+</header>
+<main class="mx-auto max-w-7xl px-6 py-12 lg:px-12 lg:py-20">
+<!-- Editorial Header -->
+<div class="mb-16 @container">
+<div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+<div class="max-w-3xl">
+<div class="mb-4 inline-flex items-center gap-2 rounded-full bg-teal-accent/10 px-3 py-1 text-xs font-bold uppercase tracking-wider text-teal-accent">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-teal-accent opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-teal-accent"></span>
+</span>
+                        Elite Care Delivery
+                    </div>
+<h1 class="text-5xl font-black leading-tight tracking-tight text-deep-blue dark:text-white lg:text-7xl">
+                        Meet Our <span class="text-primary">Specialist</span> Team
+                    </h1>
+<p class="mt-6 text-lg leading-relaxed text-slate-600 dark:text-slate-400 lg:text-xl">
+                        A multidisciplinary collective of board-certified oral and maxillofacial surgeons, prosthodontists, and specialists dedicated to the art and science of restorative dentistry.
+                    </p>
+</div>
+<div class="flex gap-4">
+<button class="flex h-12 items-center gap-2 rounded-xl bg-slate-100 px-6 text-sm font-bold text-slate-900 hover:bg-slate-200 transition-all dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+<span class="material-symbols-outlined text-lg">filter_list</span>
+                        Filter Specialty
+                    </button>
+</div>
+</div>
+<div class="mt-12 h-px w-full bg-gradient-to-r from-primary/30 via-slate-200 to-transparent dark:via-slate-800"></div>
+</div>
+<!-- Featured Specialist Hero Card -->
+<div class="mb-20">
+<div class="group relative overflow-hidden rounded-3xl bg-white shadow-2xl shadow-slate-200/50 dark:bg-slate-900/50 dark:shadow-none border border-slate-100 dark:border-slate-800 flex flex-col lg:flex-row items-stretch">
+<div class="relative h-[400px] w-full lg:h-auto lg:w-2/5">
+<div class="h-full w-full bg-center bg-no-repeat bg-cover transition-transform duration-700 group-hover:scale-105" data-alt="Professional portrait of a female lead surgeon in a modern clinic" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA6oMhGHAwvWFTn5r-9tHMdGK7TxTxntQ996OLRD_AfQfwvNcDijQHCaTdBVDKVwT5k6dZTmdqO92juQhwGF3bnUyllToqURSHagq-b1Na1xvHEhi35fzo7oCvAJ50qHVgfIXE--wteGqbTJnMvamMyvbo2m8CdDCJYwgzGAERUDF3ueuDSYcPe9x19VwlTjLKE3NofNjGD_IBblUWH4N8iSwph8D89yAAh9REXV1cE2S9O3nXLAWqIS5Hmk-NxF8buMFYVVwEapGY");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-deep-blue/40 to-transparent lg:bg-gradient-to-r"></div>
+</div>
+<div class="flex flex-1 flex-col justify-center p-8 lg:p-16">
+<div class="mb-4 text-sm font-bold uppercase tracking-widest text-primary">Chief Medical Officer</div>
+<h2 class="mb-4 text-4xl font-extrabold text-deep-blue dark:text-white lg:text-5xl">Dr. Sarah Jenkins, FACS</h2>
+<p class="mb-8 text-lg text-slate-600 dark:text-slate-400">
+                        Specializing in advanced reconstructive jaw surgery and complex dental implantology. With over 22 years of clinical excellence, Dr. Jenkins leads our surgical department with a focus on patient-centric outcomes.
+                    </p>
+<div class="flex flex-wrap gap-8 mb-10">
+<div>
+<div class="text-2xl font-bold text-deep-blue dark:text-white">2.5k+</div>
+<div class="text-sm text-slate-500">Successful Surgeries</div>
+</div>
+<div class="h-10 w-px bg-slate-200 dark:bg-slate-700"></div>
+<div>
+<div class="text-2xl font-bold text-deep-blue dark:text-white">Harvard</div>
+<div class="text-sm text-slate-500">Medical Alumna</div>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="flex h-14 items-center justify-center rounded-xl bg-primary px-8 text-base font-bold text-white shadow-xl shadow-primary/30 hover:bg-deep-blue transition-all">
+                            Book Consultation
+                        </button>
+<button class="flex h-14 items-center justify-center rounded-xl border-2 border-slate-200 px-8 text-base font-bold text-slate-900 hover:bg-slate-50 transition-all dark:border-slate-700 dark:text-white dark:hover:bg-slate-800">
+                            View Full Profile
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Specialist Grid -->
+<div class="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+<!-- Doctor Card 1 -->
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/40 transition-all hover:-translate-y-2 hover:shadow-2xl dark:bg-slate-900/40 dark:border-slate-800 dark:shadow-none">
+<div class="relative aspect-[4/5] overflow-hidden">
+<div class="h-full w-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Male doctor portrait looking professional and friendly" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAykpP19aAjouAIrl0znx8E3-mNN2V1UntG7UoVWFNvZx-ncbCB-PfHWlBgsq-me4zugh4t2oa6N4LaB2HKLsIdThhZOg9RAjklu3DjkSXcpQUaDNiF0_n51efMCUAfJZb2Do3OO1B8JKaU2QoOVVxZzSucv9RZtsNFt3DFVxTrdzz4QEZRowzjOF0mXM0aiXnPOEWlmFl419JFaec9U_Ct1tSQA7t6uBL1ZmbZzEn15rOHJmR5XqBZ4mT-DqiVLrrl1mWpL9kl7NM");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<button class="w-full rounded-xl bg-white py-3 text-sm font-bold text-primary">Schedule Now</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-8">
+<div class="mb-1 text-xs font-bold tracking-widest text-teal-accent uppercase">Prosthodontics</div>
+<h3 class="text-2xl font-bold text-deep-blue dark:text-white">Dr. Marcus Chen</h3>
+<p class="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                        Expert in cosmetic restoration and full-mouth rehabilitation. Board Certified with a passion for digital smile design.
+                    </p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<span class="text-xs font-medium text-slate-400">15 Years Experience</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-xl">star</span>
+<span class="font-bold text-slate-900 dark:text-white">4.9</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Doctor Card 2 -->
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/40 transition-all hover:-translate-y-2 hover:shadow-2xl dark:bg-slate-900/40 dark:border-slate-800 dark:shadow-none">
+<div class="relative aspect-[4/5] overflow-hidden">
+<div class="h-full w-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Female medical professional with stethoscope in studio lighting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBZtqj6EeHLeqKG4dyH-UFhsnNvu_2UyWa8LMk1wraUHX9RJL_OYvEKVGBR3O01WWTC0feF5SLVbzDSWCWalx3kbeZC_kozKtLfSKS7-MlfkURvtCPOa85v5IP2YqGm7G1sd4bv0aR_Cwb2CqOXf70oIW8FYG7E4yGk1X_9LXKbkw4Vd2hii_gHIq22H9cT5uHfaI50u8L_cHXv6fsESlFsKnTTvwz5pXqAEMZo7wPmex6c9rYI7JAEnuR4hGbgXKLY7JrFqw8OI9M");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<button class="w-full rounded-xl bg-white py-3 text-sm font-bold text-primary">Schedule Now</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-8">
+<div class="mb-1 text-xs font-bold tracking-widest text-teal-accent uppercase">Orthodontic Surgeon</div>
+<h3 class="text-2xl font-bold text-deep-blue dark:text-white">Dr. Elena Rodriguez</h3>
+<p class="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                        Specializing in surgical orthodontics and cleft palate reconstruction. MD, DDS, FACS.
+                    </p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<span class="text-xs font-medium text-slate-400">MD, DDS, FACS</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-xl">star</span>
+<span class="font-bold text-slate-900 dark:text-white">5.0</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Doctor Card 3 -->
+<div class="group flex flex-col overflow-hidden rounded-2xl bg-white border border-slate-100 shadow-xl shadow-slate-200/40 transition-all hover:-translate-y-2 hover:shadow-2xl dark:bg-slate-900/40 dark:border-slate-800 dark:shadow-none">
+<div class="relative aspect-[4/5] overflow-hidden">
+<div class="h-full w-full bg-center bg-no-repeat bg-cover grayscale group-hover:grayscale-0 transition-all duration-500" data-alt="Middle-aged male specialist portrait" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbs87gyWBYkMk2tI55TcLBl4SiRdou3KHbxWn3JK94twloco8ZxBcoW66lU4cb21hiexpLUtoVZXTOcUctRT--vv6cWs7oG7E5grv-vdAl927bnBuE6730pwqFAjO1Lo4nAyyL-saIFiNKKe2dRK2O1jwpqAHVk5NMmrL06C2pEeOXRtSMJiRLQ9iJx3BWUH5hK-BJf2kMbBdCTx_PxRzjx4ZYZvjni4xlB1mL1S7r5Qgv69i6CaQd3RBD2jMoN7wMajv7SbE9WW0");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="absolute bottom-6 left-6 right-6 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all">
+<button class="w-full rounded-xl bg-white py-3 text-sm font-bold text-primary">Schedule Now</button>
+</div>
+</div>
+<div class="flex flex-1 flex-col p-8">
+<div class="mb-1 text-xs font-bold tracking-widest text-teal-accent uppercase">Periodontal Expert</div>
+<h3 class="text-2xl font-bold text-deep-blue dark:text-white">Dr. James Wilson</h3>
+<p class="mt-3 text-sm leading-relaxed text-slate-500 dark:text-slate-400">
+                        Pioneer in laser-assisted periodontology and implantology expert with numerous published research works.
+                    </p>
+<div class="mt-auto pt-6 flex items-center justify-between">
+<span class="text-xs font-medium text-slate-400">Board Certified</span>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-xl">star</span>
+<span class="font-bold text-slate-900 dark:text-white">4.8</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Appointment Callout Section -->
+<div class="mt-24 overflow-hidden rounded-3xl bg-deep-blue relative">
+<div class="absolute top-0 right-0 -translate-y-1/2 translate-x-1/2 w-96 h-96 bg-primary/20 blur-[120px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 translate-y-1/2 -translate-x-1/2 w-96 h-96 bg-teal-accent/20 blur-[120px] rounded-full"></div>
+<div class="relative z-10 flex flex-col items-center text-center px-6 py-16 lg:py-24">
+<h2 class="text-3xl font-extrabold text-white lg:text-5xl max-w-2xl">Ready to Transform Your Smile with Our Experts?</h2>
+<p class="mt-6 text-lg text-slate-300 max-w-xl">
+                    Schedule a comprehensive assessment with any of our specialists today. Same-day consultations are available for urgent cases.
+                </p>
+<div class="mt-10 flex flex-col sm:flex-row gap-4">
+<button class="h-14 px-10 rounded-xl bg-primary text-white font-bold shadow-lg shadow-primary/20 hover:bg-white hover:text-deep-blue transition-all">
+                        Book Appointment
+                    </button>
+<button class="h-14 px-10 rounded-xl border border-slate-600 text-white font-bold hover:bg-white/10 transition-all">
+                        Call (555) 123-4567
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-white border-t border-slate-200 py-12 dark:bg-background-dark dark:border-slate-800">
+<div class="mx-auto max-w-7xl px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-3">
+<div class="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
+<span class="material-symbols-outlined text-sm">health_and_safety</span>
+</div>
+<h2 class="text-lg font-bold text-deep-blue dark:text-white">Max Face <span class="text-primary">Dental</span></h2>
+</div>
+<div class="text-sm text-slate-500">
+                © 2024 Max Face Dental. All rights reserved. Professional healthcare services.
+            </div>
+<div class="flex gap-6">
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+<a class="text-slate-400 hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">phone_in_talk</span></a>
+</div>
+</div>
+</footer>
+</body></html>
