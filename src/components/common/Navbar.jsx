@@ -39,13 +39,14 @@ export default function Navbar() {
       }}>
 {/* Logo */}
 <Link href="/" style={{textDecoration:'none', display:'flex', alignItems:'center', gap:'10px'}}>
-  <img 
+<img 
   src="logo.svg" 
   alt="MaxFace Logo"
   style={{
-    width:'38px',
-    height:'38px',
-    objectFit:'contain'
+    height:'55px',
+    width:'auto',
+    objectFit:'contain',
+    borderRadius:'6px'
   }}
 />
   <div>
