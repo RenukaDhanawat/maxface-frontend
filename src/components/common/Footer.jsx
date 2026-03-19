@@ -10,17 +10,26 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'20px'}}>
-              <div style={{width:'36px', height:'36px', background:'#2463eb', borderRadius:'9px', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'18px'}}>
-                🦷
-              </div>
-              <div>
-                <div style={{fontWeight:'900', fontSize:'16px', letterSpacing:'-0.5px'}}>
-                  <span style={{color:'#60a5fa'}}>MAX</span>FACE
-                </div>
-                <div style={{fontSize:'10px', color:'#475569', letterSpacing:'0.5px'}}>DENTAL & IMPLANT CLINIC</div>
-              </div>
-            </div>
+<div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'20px'}}>
+  <div style={{
+    width:'36px', height:'36px',
+    background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
+    borderRadius:'9px',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    fontSize:'18px'
+  }}>
+    🦷
+  </div>
+  <div>
+    <div style={{fontWeight:'900', fontSize:'16px', letterSpacing:'-0.5px'}}>
+      <span style={{color:'#60a5fa'}}>MAX</span>
+      <span style={{color:'white'}}>FACE</span>
+    </div>
+    <div style={{fontSize:'10px', color:'#475569', letterSpacing:'0.5px', textTransform:'uppercase'}}>
+      DENTAL & IMPLANT CLINIC
+    </div>
+  </div>
+</div>
             <p style={{color:'#475569', fontSize:'14px', lineHeight:'1.7', marginBottom:'24px', maxWidth:'260px'}}>
               Leading provider of advanced maxillofacial and oral surgery procedures in Bangalore. Committed to excellence, safety, and patient-centered care.
             </p>

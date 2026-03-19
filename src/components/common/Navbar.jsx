@@ -38,12 +38,26 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 8px 32px rgba(36,99,235,0.08)' : '0 4px 16px rgba(0,0,0,0.06)'
       }}>
 {/* Logo */}
-<Link href="/" style={{textDecoration:'none', display:'flex', alignItems:'center'}}>
-  <img
-    src="http://maxface.in/wp-content/uploads/2022/08/Max-Face-Dental-Implant-footer-logo.svg"
-    alt="Maxface Dental Clinic"
-    style={{height:'48px', width:'auto'}}
-  />
+<Link href="/" style={{textDecoration:'none', display:'flex', alignItems:'center', gap:'10px'}}>
+  <div style={{
+    width:'38px', height:'38px',
+    background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
+    borderRadius:'10px',
+    display:'flex', alignItems:'center', justifyContent:'center',
+    fontSize:'20px',
+    boxShadow:'0 4px 12px rgba(36,99,235,0.3)'
+  }}>
+    🦷
+  </div>
+  <div>
+    <div style={{fontSize:'18px', fontWeight:'900', letterSpacing:'-0.5px', lineHeight:'1.1'}}>
+      <span style={{color:'#2463eb'}}>MAX</span>
+      <span style={{color:'#0f172a'}}>FACE</span>
+    </div>
+    <div style={{fontSize:'9px', color:'#94a3b8', letterSpacing:'1.5px', textTransform:'uppercase', lineHeight:'1'}}>
+      Dental & Implant Clinic
+    </div>
+  </div>
 </Link>
 
         {/* Desktop Links */}
