@@ -39,7 +39,7 @@ export default function Navbar() {
       }}>
 {/* Logo */}
 <img 
-  src="logo.svg" 
+  src="/logo.svg" 
   alt="MaxFace Logo"
   style={{
     height:'55px',
