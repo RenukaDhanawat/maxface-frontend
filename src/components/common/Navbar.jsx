@@ -38,7 +38,8 @@ export default function Navbar() {
         boxShadow: scrolled ? '0 8px 32px rgba(36,99,235,0.08)' : '0 4px 16px rgba(0,0,0,0.06)'
       }}>
 {/* Logo */}
-<img 
+<Link href="/" style={{textDecoration:'none', display:'flex', alignItems:'center', gap:'10px'}}>
+  <img 
   src="logo.svg" 
   alt="MaxFace Logo"
   style={{
@@ -47,6 +48,16 @@ export default function Navbar() {
     objectFit:'contain'
   }}
 />
+  <div>
+    <div style={{fontSize:'18px', fontWeight:'900', letterSpacing:'-0.5px', lineHeight:'1.1'}}>
+      <span style={{color:'#2463eb'}}>MAX</span>
+      <span style={{color:'#0f172a'}}>FACE</span>
+    </div>
+    <div style={{fontSize:'9px', color:'#94a3b8', letterSpacing:'1.5px', textTransform:'uppercase', lineHeight:'1'}}>
+      Dental & Implant Clinic
+    </div>
+  </div>
+</Link>
 
         {/* Desktop Links */}
         <div style={{display:'flex', alignItems:'center', gap:'4px'}}>
