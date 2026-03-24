@@ -192,6 +192,18 @@ body {
   }
 }
 
+/* Desktop Layout Fixes */
+@media (min-width: 1024px) {
+  /* Ensure 2-column layouts on desktop */
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .doctor-card {
+    grid-template-columns: 340px 1fr;
+  }
+}
+
 /* Responsive Container */
 .container-responsive {
   width: 100%;

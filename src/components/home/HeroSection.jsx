@@ -14,7 +14,7 @@ export default function HeroSection() {
       <div style={{
         maxWidth:'1280px', margin:'0 auto', padding:'0 clamp(16px, 5vw, 24px)', 
         display:'grid', 
-        gridTemplateColumns:'1fr',
+        gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))',
         gap:'clamp(32px, 8vw, 80px)', 
         alignItems:'center'
       }}>

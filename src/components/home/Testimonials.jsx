@@ -59,7 +59,7 @@ export default function Testimonials() {
   const next = () => setCurrent(c => c === testimonials.length - 1 ? 0 : c + 1)
 
   return (
-    <section style={{padding:'96px 24px', background:'#0f172a', position:'relative', overflow:'hidden'}}>
+    <section style={{padding:'clamp(48px, 10vw, 96px) 16px', background:'#0f172a', position:'relative', overflow:'hidden'}}>
 
       {/* Background decorations */}
       <div style={{position:'absolute', top:'-100px', left:'-100px', width:'400px', height:'400px', borderRadius:'50%', background:'rgba(36,99,235,0.08)', filter:'blur(60px)', pointerEvents:'none'}}/>
@@ -69,12 +69,12 @@ export default function Testimonials() {
       <div style={{maxWidth:'1280px', margin:'0 auto'}}>
 
         {/* Header */}
-        <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-end', marginBottom:'56px', flexWrap:'wrap', gap:'24px'}}>
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'flex-end', marginBottom:'clamp(32px, 8vw, 56px)', flexWrap:'wrap', gap:'clamp(16px, 4vw, 24px)'}}>
           <div>
-            <p style={{fontSize:'11px', fontWeight:'700', color:'#2463eb', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'12px'}}>
+            <p style={{fontSize:'clamp(10px, 2vw, 11px)', fontWeight:'700', color:'#2463eb', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'12px'}}>
               PATIENT STORIES
             </p>
-            <h2 style={{fontSize:'clamp(28px, 4vw, 44px)', fontWeight:'900', color:'white', letterSpacing:'-1px', maxWidth:'500px', lineHeight:'1.15'}}>
+            <h2 style={{fontSize:'clamp(24px, 5vw, 44px)', fontWeight:'900', color:'white', letterSpacing:'-1px', maxWidth:'500px', lineHeight:'1.15'}}>
               Trusted by thousands for{' '}
               <span style={{background:'linear-gradient(to right, #60a5fa, #34d399)', WebkitBackgroundClip:'text', WebkitTextFillColor:'transparent'}}>
                 transformative results.

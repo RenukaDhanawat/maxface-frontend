@@ -28,7 +28,7 @@ export default function DoctorSection() {
           background:'white', borderRadius:'24px', border:'1px solid #f1f5f9',
           boxShadow:'0 4px 24px rgba(0,0,0,0.06)',
           display:'grid', 
-          gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+          gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))',
           overflow:'hidden', marginBottom:'32px'
         }}>
           {/* Photo */}

@@ -3,26 +3,26 @@ import Link from 'next/link'
 
 export default function WhyChooseUs() {
   return (
-    <section style={{padding:'96px 24px', background:'white'}}>
-      <div style={{maxWidth:'1280px', margin:'0 auto', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'96px', alignItems:'center'}}>
+    <section style={{padding:'clamp(48px, 10vw, 96px) 16px', background:'white'}}>
+      <div style={{maxWidth:'1280px', margin:'0 auto', display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))', gap:'clamp(48px, 10vw, 96px)', alignItems:'center'}}>
 
         {/* Left — Images grid */}
-        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'16px'}}>
-          <div style={{display:'flex', flexDirection:'column', gap:'16px'}}>
-            <div style={{borderRadius:'20px', overflow:'hidden', height:'200px'}}>
+        <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'clamp(12px, 3vw, 16px)'}}>
+          <div style={{display:'flex', flexDirection:'column', gap:'clamp(12px, 3vw, 16px)'}}>
+            <div style={{borderRadius:'20px', overflow:'hidden', height:'clamp(150px, 25vw, 200px)'}}>
               <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?w=300&h=200&fit=crop&auto=format" style={{width:'100%', height:'100%', objectFit:'cover'}} alt="Dental" />
             </div>
-            <div style={{background:'linear-gradient(135deg, #14b8a6, #0ea5e9)', borderRadius:'20px', padding:'28px', color:'white'}}>
-              <div style={{fontSize:'36px', fontWeight:'900', letterSpacing:'-1px'}}>25+</div>
-              <div style={{fontSize:'13px', opacity:0.9, marginTop:'4px'}}>Years of Clinical Experience</div>
+            <div style={{background:'linear-gradient(135deg, #14b8a6, #0ea5e9)', borderRadius:'20px', padding:'clamp(20px, 4vw, 28px)', color:'white'}}>
+              <div style={{fontSize:'clamp(28px, 6vw, 36px)', fontWeight:'900', letterSpacing:'-1px'}}>25+</div>
+              <div style={{fontSize:'clamp(11px, 2vw, 13px)', opacity:0.9, marginTop:'4px'}}>Years of Clinical Experience</div>
             </div>
           </div>
-          <div style={{display:'flex', flexDirection:'column', gap:'16px', marginTop:'32px'}}>
-            <div style={{background:'linear-gradient(135deg, #1e3a8a, #2463eb)', borderRadius:'20px', padding:'28px', color:'white'}}>
-              <div style={{fontSize:'36px', fontWeight:'900', letterSpacing:'-1px'}}>15k+</div>
-              <div style={{fontSize:'13px', opacity:0.9, marginTop:'4px'}}>Successful Surgeries Performed</div>
+          <div style={{display:'flex', flexDirection:'column', gap:'clamp(12px, 3vw, 16px)', marginTop:'clamp(16px, 4vw, 32px)'}}>
+            <div style={{background:'linear-gradient(135deg, #1e3a8a, #2463eb)', borderRadius:'20px', padding:'clamp(20px, 4vw, 28px)', color:'white'}}>
+              <div style={{fontSize:'clamp(28px, 6vw, 36px)', fontWeight:'900', letterSpacing:'-1px'}}>15k+</div>
+              <div style={{fontSize:'clamp(11px, 2vw, 13px)', opacity:0.9, marginTop:'4px'}}>Successful Surgeries Performed</div>
             </div>
-            <div style={{borderRadius:'20px', overflow:'hidden', height:'200px'}}>
+            <div style={{borderRadius:'20px', overflow:'hidden', height:'clamp(150px, 25vw, 200px)'}}>
               <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=300&h=200&fit=crop&auto=format" style={{width:'100%', height:'100%', objectFit:'cover'}} alt="Dental" />
             </div>
           </div>
@@ -30,14 +30,14 @@ export default function WhyChooseUs() {
 
         {/* Right — Content */}
         <div>
-          <p style={{fontSize:'11px', fontWeight:'700', color:'#2463eb', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'16px'}}>
+          <p style={{fontSize:'clamp(10px, 2vw, 11px)', fontWeight:'700', color:'#2463eb', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'16px'}}>
             THE MAXFACE STANDARD
           </p>
-          <h2 style={{fontSize:'clamp(28px, 3vw, 44px)', fontWeight:'900', color:'#0f172a', marginBottom:'40px', letterSpacing:'-1px'}}>
+          <h2 style={{fontSize:'clamp(24px, 5vw, 44px)', fontWeight:'900', color:'#0f172a', marginBottom:'clamp(24px, 5vw, 40px)', letterSpacing:'-1px'}}>
             Redefining modern patient care.
           </h2>
 
-          <div style={{display:'flex', flexDirection:'column', gap:'28px', marginBottom:'40px'}}>
+          <div style={{display:'flex', flexDirection:'column', gap:'clamp(20px, 4vw, 28px)', marginBottom:'clamp(24px, 5vw, 40px)'}}>
             {[
               { icon:'🎯', title:'AI-Guided Precision', desc:'We utilize AI imaging software to map your facial structure with sub-millimeter accuracy before any incision is made.' },
               { icon:'🏆', title:'Certified Implantologists', desc:'Dr. Srinivasa Rao is internationally certified with expertise in basic to advanced implantology and anaplastology.' },
@@ -54,8 +54,8 @@ export default function WhyChooseUs() {
                   {item.icon}
                 </div>
                 <div>
-                  <h4 style={{fontSize:'15px', fontWeight:'700', color:'#0f172a', marginBottom:'4px'}}>{item.title}</h4>
-                  <p style={{fontSize:'14px', color:'#64748b', lineHeight:'1.6'}}>{item.desc}</p>
+                  <h4 style={{fontSize:'clamp(14px, 2.5vw, 15px)', fontWeight:'700', color:'#0f172a', marginBottom:'4px'}}>{item.title}</h4>
+                  <p style={{fontSize:'clamp(13px, 2vw, 14px)', color:'#64748b', lineHeight:'1.6'}}>{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -64,8 +64,8 @@ export default function WhyChooseUs() {
           <Link href="/about" style={{
             display:'inline-block',
             background:'#0f172a', color:'white',
-            padding:'13px 28px', borderRadius:'10px',
-            textDecoration:'none', fontWeight:'700', fontSize:'14px'
+            padding:'clamp(11px, 2vw, 13px) clamp(20px, 4vw, 28px)', borderRadius:'10px',
+            textDecoration:'none', fontWeight:'700', fontSize:'clamp(13px, 2vw, 14px)'
           }}>
             Learn About Our Approach →
           </Link>
