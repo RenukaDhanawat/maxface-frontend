@@ -4,14 +4,20 @@ import Link from 'next/link'
 export default function HeroSection() {
   return (
     <section style={{
-      position:'relative', paddingTop:'160px', paddingBottom:'96px',
+      position:'relative', paddingTop:'clamp(80px, 15vw, 160px)', paddingBottom:'clamp(48px, 12vw, 96px)',
       overflow:'hidden', background:'#f8fafc'
     }}>
       {/* Background blobs */}
-      <div style={{position:'absolute', top:'-10%', right:'-5%', width:'600px', height:'600px', borderRadius:'50%', background:'rgba(36,99,235,0.08)', filter:'blur(80px)', pointerEvents:'none'}}/>
-      <div style={{position:'absolute', bottom:'10%', right:'15%', width:'400px', height:'400px', borderRadius:'50%', background:'rgba(20,184,166,0.08)', filter:'blur(60px)', pointerEvents:'none'}}/>
+      <div style={{position:'absolute', top:'-10%', right:'-5%', width:'clamp(300px, 50vw, 600px)', height:'clamp(300px, 50vw, 600px)', borderRadius:'50%', background:'rgba(36,99,235,0.08)', filter:'blur(80px)', pointerEvents:'none'}}/>
+      <div style={{position:'absolute', bottom:'10%', right:'15%', width:'clamp(200px, 40vw, 400px)', height:'clamp(200px, 40vw, 400px)', borderRadius:'50%', background:'rgba(20,184,166,0.08)', filter:'blur(60px)', pointerEvents:'none'}}/>
 
-      <div style={{maxWidth:'1280px', margin:'0 auto', padding:'0 24px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'80px', alignItems:'center'}}>
+      <div style={{
+        maxWidth:'1280px', margin:'0 auto', padding:'0 clamp(16px, 5vw, 24px)', 
+        display:'grid', 
+        gridTemplateColumns:'1fr',
+        gap:'clamp(32px, 8vw, 80px)', 
+        alignItems:'center'
+      }}>
 
         {/* Left */}
         <div>
@@ -19,17 +25,17 @@ export default function HeroSection() {
             display:'inline-flex', alignItems:'center', gap:'8px',
             padding:'6px 14px', borderRadius:'9999px',
             background:'rgba(36,99,235,0.08)', border:'1px solid rgba(36,99,235,0.15)',
-            color:'#2463eb', fontSize:'11px', fontWeight:'700',
-            letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:'28px'
+            color:'#2463eb', fontSize:'clamp(10px, 2vw, 11px)', fontWeight:'700',
+            letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:'clamp(16px, 4vw, 28px)'
           }}>
             <span style={{width:'6px', height:'6px', borderRadius:'50%', background:'#2463eb', display:'inline-block'}}/>
             Now Accepting Digital Referrals
           </div>
 
           <h1 style={{
-            fontSize:'clamp(42px, 5vw, 68px)', fontWeight:'900',
+            fontSize:'clamp(28px, 7vw, 68px)', fontWeight:'900',
             lineHeight:'1.05', letterSpacing:'-2px',
-            color:'#0f172a', marginBottom:'24px'
+            color:'#0f172a', marginBottom:'clamp(16px, 4vw, 24px)'
           }}>
             Precision care<br/>
             for your{' '}
@@ -43,17 +49,17 @@ export default function HeroSection() {
           </h1>
 
           <p style={{
-            fontSize:'17px', color:'#64748b', lineHeight:'1.75',
-            marginBottom:'40px', maxWidth:'480px'
+            fontSize:'clamp(14px, 3vw, 17px)', color:'#64748b', lineHeight:'1.75',
+            marginBottom:'clamp(24px, 5vw, 40px)', maxWidth:'480px'
           }}>
             Experience world-class dental implants and reconstructive surgery at Kasturi Nagar, Bangalore. Led by Dr. B Srinivas Rao — certified implantologist trained at Branemark Osseointegration Center, Sweden.
           </p>
 
-          <div style={{display:'flex', gap:'14px', flexWrap:'wrap', marginBottom:'48px'}}>
+          <div style={{display:'flex', gap:'clamp(10px, 3vw, 14px)', flexWrap:'wrap', marginBottom:'clamp(24px, 5vw, 48px)'}}>
             <Link href="/appointment" style={{
               background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
-              color:'white', padding:'15px 32px', borderRadius:'12px',
-              textDecoration:'none', fontSize:'15px', fontWeight:'700',
+              color:'white', padding:'clamp(12px, 2vw, 15px) clamp(20px, 4vw, 32px)', borderRadius:'12px',
+              textDecoration:'none', fontSize:'clamp(13px, 2.5vw, 15px)', fontWeight:'700',
               boxShadow:'0 8px 24px rgba(36,99,235,0.3)',
               transition:'all 0.2s', display:'inline-block'
             }}
@@ -65,9 +71,9 @@ export default function HeroSection() {
             <a href="tel:+919980477725" style={{
               background:'white',
               border:'1.5px solid #e2e8f0',
-              color:'#0f172a', padding:'15px 32px',
+              color:'#0f172a', padding:'clamp(12px, 2vw, 15px) clamp(20px, 4vw, 32px)',
               borderRadius:'12px', textDecoration:'none',
-              fontSize:'15px', fontWeight:'700',
+              fontSize:'clamp(13px, 2.5vw, 15px)', fontWeight:'700',
               display:'inline-flex', alignItems:'center', gap:'8px',
               boxShadow:'0 2px 8px rgba(0,0,0,0.06)', transition:'all 0.2s'
             }}
@@ -79,15 +85,15 @@ export default function HeroSection() {
           </div>
 
           {/* Stats */}
-          <div style={{display:'flex', gap:'32px', paddingTop:'32px', borderTop:'1px solid #e2e8f0'}}>
+          <div style={{display:'flex', gap:'clamp(16px, 4vw, 32px)', paddingTop:'clamp(16px, 4vw, 32px)', borderTop:'1px solid #e2e8f0', flexWrap:'wrap'}}>
             {[
               { value:'5,000+', label:'Patients Treated' },
               { value:'8+',     label:'Years Experience' },
               { value:'4.9★',   label:'Google Rating' },
             ].map(stat => (
               <div key={stat.label}>
-                <div style={{fontSize:'24px', fontWeight:'900', color:'#0f172a', letterSpacing:'-1px'}}>{stat.value}</div>
-                <div style={{fontSize:'12px', color:'#94a3b8', fontWeight:'500', marginTop:'2px'}}>{stat.label}</div>
+                <div style={{fontSize:'clamp(18px, 4vw, 24px)', fontWeight:'900', color:'#0f172a', letterSpacing:'-1px'}}>{stat.value}</div>
+                <div style={{fontSize:'clamp(10px, 2vw, 12px)', color:'#94a3b8', fontWeight:'500', marginTop:'2px'}}>{stat.label}</div>
               </div>
             ))}
           </div>
@@ -110,16 +116,20 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Floating card - top right */}
+          {/* Floating card - top right - Hide on mobile */}
           <div style={{
+            display: 'none',
             position:'absolute', top:'-20px', right:'-20px',
             background:'rgba(255,255,255,0.92)',
             backdropFilter:'blur(12px)',
             border:'1px solid rgba(255,255,255,0.6)',
             borderRadius:'16px', padding:'16px 20px',
             boxShadow:'0 8px 32px rgba(0,0,0,0.08)',
-            maxWidth:'190px'
-          }}>
+            maxWidth:'190px',
+            '@media (min-width: 768px)': {
+              display: 'block'
+            }
+          }} className="hidden md:block">
             <div style={{display:'flex', alignItems:'center', gap:'8px', marginBottom:'6px'}}>
               <div style={{width:'32px', height:'32px', background:'rgba(20,184,166,0.1)', borderRadius:'8px', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'16px'}}>
                 ✅
@@ -133,16 +143,20 @@ export default function HeroSection() {
             </p>
           </div>
 
-          {/* Floating card - bottom left */}
+          {/* Floating card - bottom left - Hide on mobile */}
           <div style={{
+            display: 'none',
             position:'absolute', bottom:'-24px', left:'-24px',
             background:'rgba(255,255,255,0.95)',
             backdropFilter:'blur(12px)',
             border:'1px solid rgba(255,255,255,0.6)',
             borderRadius:'16px', padding:'20px',
             boxShadow:'0 8px 32px rgba(0,0,0,0.08)',
-            width:'230px'
-          }}>
+            width:'230px',
+            '@media (min-width: 768px)': {
+              display: 'block'
+            }
+          }} className="hidden md:block">
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', marginBottom:'12px'}}>
               <span style={{fontSize:'13px', fontWeight:'800', color:'#0f172a'}}>Next Availability</span>
               <span style={{
@@ -175,14 +189,18 @@ export default function HeroSection() {
             </Link>
           </div>
 
-          {/* Floating card - middle right */}
+          {/* Floating card - middle right - Hide on mobile */}
           <div style={{
+            display: 'none',
             position:'absolute', top:'45%', right:'-32px',
             background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
             borderRadius:'14px', padding:'14px 18px',
             boxShadow:'0 8px 24px rgba(36,99,235,0.3)',
-            color:'white'
-          }}>
+            color:'white',
+            '@media (min-width: 768px)': {
+              display: 'block'
+            }
+          }} className="hidden md:block">
             <div style={{fontSize:'22px', fontWeight:'900', letterSpacing:'-1px'}}>4.9 ★</div>
             <div style={{fontSize:'11px', opacity:0.85, marginTop:'2px'}}>Google Rating</div>
             <div style={{fontSize:'10px', opacity:0.7}}>500+ reviews</div>
@@ -190,6 +208,17 @@ export default function HeroSection() {
 
         </div>
       </div>
+
+      {/* Responsive grid adjustment for larger screens */}
+      <style>{`
+        @media (min-width: 768px) {
+          section {
+            display: grid;
+            grid-template-columns: 1fr 1fr !important;
+            gap: 80px !important;
+          }
+        }
+      `}</style>
     </section>
   )
 }

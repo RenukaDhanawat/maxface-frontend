@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer style={{background:'#0f172a', color:'white', padding:'72px 24px 24px'}}>
+    <footer style={{background:'#0f172a', color:'white', padding:'clamp(48px, 10vw, 72px) 16px 24px'}}>
       <div style={{maxWidth:'1280px', margin:'0 auto'}}>
 
-        <div style={{display:'grid', gridTemplateColumns:'1.8fr 1fr 1fr 1fr', gap:'48px', marginBottom:'56px'}}>
+        <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(240px, 1fr))', gap:'clamp(24px, 5vw, 48px)', marginBottom:'clamp(32px, 8vw, 56px)'}}>
 
           {/* Brand */}
           <div>
@@ -21,16 +21,16 @@ export default function Footer() {
     🦷
   </div>
   <div>
-    <div style={{fontWeight:'900', fontSize:'16px', letterSpacing:'-0.5px'}}>
+    <div style={{fontWeight:'900', fontSize:'clamp(14px, 2vw, 16px)', letterSpacing:'-0.5px'}}>
       <span style={{color:'#60a5fa'}}>MAX</span>
       <span style={{color:'white'}}>FACE</span>
     </div>
-    <div style={{fontSize:'10px', color:'#475569', letterSpacing:'0.5px', textTransform:'uppercase'}}>
+    <div style={{fontSize:'clamp(9px, 1.5vw, 10px)', color:'#475569', letterSpacing:'0.5px', textTransform:'uppercase'}}>
       DENTAL & IMPLANT CLINIC
     </div>
   </div>
 </div>
-            <p style={{color:'#475569', fontSize:'14px', lineHeight:'1.7', marginBottom:'24px', maxWidth:'260px'}}>
+            <p style={{color:'#475569', fontSize:'clamp(13px, 2vw, 14px)', lineHeight:'1.7', marginBottom:'24px', maxWidth:'260px'}}>
               Leading provider of advanced maxillofacial and oral surgery procedures in Bangalore. Committed to excellence, safety, and patient-centered care.
             </p>
             <div style={{display:'flex', gap:'10px'}}>
@@ -48,12 +48,12 @@ export default function Footer() {
 
           {/* Clinical Services */}
           <div>
-            <h4 style={{fontWeight:'700', marginBottom:'20px', fontSize:'13px', color:'white', letterSpacing:'0.5px', textTransform:'uppercase'}}>
+            <h4 style={{fontWeight:'700', marginBottom:'20px', fontSize:'clamp(12px, 2vw, 13px)', color:'white', letterSpacing:'0.5px', textTransform:'uppercase'}}>
               Clinical Services
             </h4>
             <div style={{display:'flex', flexDirection:'column', gap:'10px'}}>
               {['Dental Implants','Endodontics','Prosthodontics','Orthodontics','Periodontics','Oral Surgery'].map(t => (
-                <Link key={t} href="/treatments" style={{color:'#475569', textDecoration:'none', fontSize:'14px', transition:'color 0.2s'}}
+                <Link key={t} href="/treatments" style={{color:'#475569', textDecoration:'none', fontSize:'clamp(13px, 2vw, 14px)', transition:'color 0.2s'}}
                   onMouseEnter={e => e.target.style.color = '#94a3b8'}
                   onMouseLeave={e => e.target.style.color = '#475569'}
                 >
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Patient Resources */}
           <div>
-            <h4 style={{fontWeight:'700', marginBottom:'20px', fontSize:'13px', color:'white', letterSpacing:'0.5px', textTransform:'uppercase'}}>
+            <h4 style={{fontWeight:'700', marginBottom:'20px', fontSize:'clamp(12px, 2vw, 13px)', color:'white', letterSpacing:'0.5px', textTransform:'uppercase'}}>
               Patient Resources
             </h4>
             <div style={{display:'flex', flexDirection:'column', gap:'10px'}}>
@@ -77,7 +77,7 @@ export default function Footer() {
                 { name:'Book Appointment',href:'/appointment' },
                 { name:'Patient Portal',  href:'/portal' },
               ].map(link => (
-                <Link key={link.name} href={link.href} style={{color:'#475569', textDecoration:'none', fontSize:'14px'}}>
+                <Link key={link.name} href={link.href} style={{color:'#475569', textDecoration:'none', fontSize:'clamp(13px, 2vw, 14px)'}}>
                   {link.name}
                 </Link>
               ))}
@@ -86,32 +86,32 @@ export default function Footer() {
 
           {/* Location */}
           <div>
-            <h4 style={{fontWeight:'700', marginBottom:'20px', fontSize:'13px', color:'white', letterSpacing:'0.5px', textTransform:'uppercase'}}>
+            <h4 style={{fontWeight:'700', marginBottom:'20px', fontSize:'clamp(12px, 2vw, 13px)', color:'white', letterSpacing:'0.5px', textTransform:'uppercase'}}>
               Location
             </h4>
             <div style={{display:'flex', flexDirection:'column', gap:'14px'}}>
               <div style={{display:'flex', gap:'10px', alignItems:'flex-start'}}>
                 <span style={{fontSize:'16px', flexShrink:0, marginTop:'1px'}}>📍</span>
-                <span style={{color:'#475569', fontSize:'13px', lineHeight:'1.6'}}>
+                <span style={{color:'#475569', fontSize:'clamp(12px, 2vw, 13px)', lineHeight:'1.6'}}>
                   Reg No 14/268A, 1st Floor, RS Arcade, Kasturi Nagar, Bangalore - 560043
                 </span>
               </div>
               <div style={{display:'flex', gap:'10px'}}>
                 <span style={{fontSize:'16px'}}>📞</span>
                 <div>
-                  <a href="tel:+919845655304" style={{color:'#475569', textDecoration:'none', fontSize:'13px', display:'block'}}>+91 98456 55304</a>
-                  <a href="tel:+919980477725" style={{color:'#475569', textDecoration:'none', fontSize:'13px', display:'block'}}>+91 99804 77725</a>
+                  <a href="tel:+919845655304" style={{color:'#475569', textDecoration:'none', fontSize:'clamp(12px, 2vw, 13px)', display:'block'}}>+91 98456 55304</a>
+                  <a href="tel:+919980477725" style={{color:'#475569', textDecoration:'none', fontSize:'clamp(12px, 2vw, 13px)', display:'block'}}>+91 99804 77725</a>
                 </div>
               </div>
               <div style={{display:'flex', gap:'10px'}}>
                 <span style={{fontSize:'16px'}}>📧</span>
-                <a href="mailto:maxface.in@gmail.com" style={{color:'#475569', textDecoration:'none', fontSize:'13px'}}>
+                <a href="mailto:maxface.in@gmail.com" style={{color:'#475569', textDecoration:'none', fontSize:'clamp(12px, 2vw, 13px)'}}>
                   maxface.in@gmail.com
                 </a>
               </div>
               <div style={{display:'flex', gap:'10px'}}>
                 <span style={{fontSize:'16px'}}>🕐</span>
-                <span style={{color:'#475569', fontSize:'13px', lineHeight:'1.6'}}>
+                <span style={{color:'#475569', fontSize:'clamp(12px, 2vw, 13px)', lineHeight:'1.6'}}>
                   Mon–Sat: 9:00–18:00<br/>
                   Sunday: Emergency Only
                 </span>
@@ -125,15 +125,15 @@ export default function Footer() {
         <div style={{
           borderTop:'1px solid #1e293b', paddingTop:'24px',
           display:'flex', justifyContent:'space-between',
-          alignItems:'center', flexWrap:'wrap', gap:'12px'
+          alignItems:'center', flexWrap:'wrap', gap:'clamp(8px, 2vw, 12px)'
         }}>
-          <p style={{color:'#334155', fontSize:'13px'}}>
+          <p style={{color:'#334155', fontSize:'clamp(11px, 2vw, 13px)'}}>
             © 2026 Maxface Dental Implant & Anaplastology Clinic. All rights reserved.
           </p>
-          <div style={{display:'flex', gap:'20px', alignItems:'center'}}>
-            <span style={{color:'#334155', fontSize:'13px', cursor:'pointer'}}>Privacy Policy</span>
-            <span style={{color:'#334155', fontSize:'13px', cursor:'pointer'}}>Terms of Service</span>
-            <a href="/admin" style={{color:'#1e293b', fontSize:'13px', textDecoration:'none'}}>Admin</a>
+          <div style={{display:'flex', gap:'clamp(12px, 3vw, 20px)', alignItems:'center', flexWrap:'wrap'}}>
+            <span style={{color:'#334155', fontSize:'clamp(11px, 2vw, 13px)', cursor:'pointer'}}>Privacy Policy</span>
+            <span style={{color:'#334155', fontSize:'clamp(11px, 2vw, 13px)', cursor:'pointer'}}>Terms of Service</span>
+            <a href="/admin" style={{color:'#1e293b', fontSize:'clamp(11px, 2vw, 13px)', textDecoration:'none'}}>Admin</a>
           </div>
         </div>
 

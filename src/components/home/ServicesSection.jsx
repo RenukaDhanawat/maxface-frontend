@@ -12,27 +12,27 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section style={{padding:'96px 24px', background:'rgba(248,250,252,0.5)'}}>
+    <section style={{padding:'clamp(48px, 10vw, 96px) 16px', background:'rgba(248,250,252,0.5)'}}>
       <div style={{maxWidth:'1280px', margin:'0 auto'}}>
 
         {/* Header */}
-        <div style={{textAlign:'center', marginBottom:'72px'}}>
-          <p style={{fontSize:'11px', fontWeight:'700', color:'#2463eb', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'16px'}}>
+        <div style={{textAlign:'center', marginBottom:'clamp(48px, 10vw, 72px)'}}>
+          <p style={{fontSize:'clamp(10px, 2vw, 11px)', fontWeight:'700', color:'#2463eb', letterSpacing:'0.2em', textTransform:'uppercase', marginBottom:'16px'}}>
             OUR EXPERTISE
           </p>
-          <h2 style={{fontSize:'clamp(32px, 4vw, 48px)', fontWeight:'900', color:'#0f172a', marginBottom:'16px', letterSpacing:'-1.5px'}}>
+          <h2 style={{fontSize:'clamp(26px, 6vw, 48px)', fontWeight:'900', color:'#0f172a', marginBottom:'16px', letterSpacing:'-1.5px'}}>
             Clinical excellence in every procedure.
           </h2>
-          <p style={{fontSize:'16px', color:'#64748b', maxWidth:'540px', margin:'0 auto', lineHeight:'1.7'}}>
+          <p style={{fontSize:'clamp(14px, 3vw, 16px)', color:'#64748b', maxWidth:'540px', margin:'0 auto', lineHeight:'1.7'}}>
             We blend surgical mastery with artistic precision to restore functionality and aesthetic balance to your face and smile.
           </p>
         </div>
 
         {/* Grid */}
-        <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))', gap:'24px'}}>
+        <div style={{display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(280px, 1fr))', gap:'clamp(16px, 3vw, 24px)'}}>
           {services.map(service => (
             <div key={service.slug} style={{
-              background:'white', padding:'40px', borderRadius:'24px',
+              background:'white', padding:'clamp(24px, 5vw, 40px)', borderRadius:'24px',
               border:'1px solid #f1f5f9',
               boxShadow:'0 2px 8px rgba(0,0,0,0.04)',
               transition:'all 0.4s ease'
@@ -61,15 +61,15 @@ export default function ServicesSection() {
                   {service.slug === 'maxillofacial-prosthodontics' && '🎭'}
                 </span>
               </div>
-              <h4 style={{fontSize:'18px', fontWeight:'700', color:'#0f172a', marginBottom:'12px', letterSpacing:'-0.3px'}}>
+              <h4 style={{fontSize:'clamp(16px, 3vw, 18px)', fontWeight:'700', color:'#0f172a', marginBottom:'12px', letterSpacing:'-0.3px'}}>
                 {service.title}
               </h4>
-              <p style={{fontSize:'14px', color:'#64748b', lineHeight:'1.7', marginBottom:'28px'}}>
+              <p style={{fontSize:'clamp(13px, 2vw, 14px)', color:'#64748b', lineHeight:'1.7', marginBottom:'28px'}}>
                 {service.desc}
               </p>
               <Link href={`/treatments/${service.slug}`} style={{
                 display:'inline-flex', alignItems:'center', gap:'6px',
-                color:'#2463eb', fontWeight:'700', fontSize:'14px', textDecoration:'none'
+                color:'#2463eb', fontWeight:'700', fontSize:'clamp(13px, 2vw, 14px)', textDecoration:'none'
               }}>
                 Learn More →
               </Link>
@@ -78,12 +78,12 @@ export default function ServicesSection() {
         </div>
 
         {/* View All */}
-        <div style={{textAlign:'center', marginTop:'48px'}}>
+        <div style={{textAlign:'center', marginTop:'clamp(32px, 8vw, 48px)'}}>
           <Link href="/treatments" style={{
             display:'inline-block',
             border:'1.5px solid #DBEAFE', color:'#2463eb',
-            padding:'12px 32px', borderRadius:'10px',
-            textDecoration:'none', fontWeight:'700', fontSize:'14px',
+            padding:'clamp(10px, 2vw, 12px) clamp(20px, 4vw, 32px)', borderRadius:'10px',
+            textDecoration:'none', fontWeight:'700', fontSize:'clamp(13px, 2vw, 14px)',
             background:'white'
           }}>
             View All Treatments →
