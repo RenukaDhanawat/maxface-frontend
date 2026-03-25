@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
@@ -13,6 +14,7 @@ const navLinks = [
 ]
 
 export default function Navbar() {
+  const pathname = usePathname() || '/' 
   const [scrolled, setScrolled] = useState(false)
   const [isOpen,   setIsOpen]   = useState(false)
   const [showNavbar, setShowNavbar] = useState(true)
@@ -74,24 +76,30 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="nav-links hidden lg:flex items-center gap-6">
-          {navLinks.map(link => (
-            <Link key={link.name} href={link.href} className="nav-link">
-              {link.name}
-            </Link>
-          ))}
+        <div className="nav-links" style={{ display:'flex', alignItems:'center', gap:'1.25rem' }}>
+          {navLinks.map(link => {
+            const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href))
+            return (
+              <Link key={link.name} href={link.href}
+                className={`nav-link${isActive ? ' active' : ''}`}
+                style={{ color:'#0f172a', fontWeight:600, textDecoration:'none', fontSize:'clamp(14px, 1.2vw, 16px)', padding:'8px 4px' }}
+              >
+                {link.name}
+              </Link>
+            )
+          })}
         </div>
 
         {/* Mobile Menu Button - with lucide-react icon */}
         <button 
-          className="mobile-menu-btn lg:hidden"
+          className="mobile-menu-btn" 
           onClick={() => setIsOpen(!isOpen)}
           style={{
           marginLeft: 'auto',
           background: 'none',
           border: 'none',
           cursor: 'pointer',
-          display: 'flex',
+          display: 'none',
           alignItems: 'center',
           justifyContent: 'center',
           color: '#0f172a',
@@ -106,7 +114,7 @@ export default function Navbar() {
         </button>
 
         {/* CTA - Desktop */}
-        <div className="hidden lg:flex items-center gap-2">
+        <div className="desktop-cta" style={{ display:'flex', alignItems:'center', gap:'0.5rem' }}>
           <Link href="/portal" style={{
             color:'#2463eb', fontWeight:'700', fontSize:'clamp(11px, 2vw, 13px)',
             padding:'7px 16px', borderRadius:'9999px',
@@ -166,6 +174,61 @@ export default function Navbar() {
       </div>
       
       <style>{`
+        .nav-links { display: flex; }
+        .desktop-cta { display: flex; }
+        .mobile-menu-btn { display: none; }
+
+        .nav-link {
+          color: #0f172a;
+          font-size: clamp(14px, 1.2vw, 16px);
+          font-weight: 700;
+          text-decoration: none;
+          padding: 8px 4px;
+          position: relative;
+          transition: color 0.2s ease-out;
+        }
+
+        .nav-link::after {
+          content: '';
+          position: absolute;
+          left: 0;
+          bottom: -2px;
+          width: 0;
+          height: 2px;
+          background: #2463eb;
+          transition: width 0.25s ease;
+          border-radius: 2px;
+        }
+
+        .nav-link:hover {
+          color: #1d4ed8;
+        }
+
+        .nav-link.active {
+          color: #0b61d9;
+        }
+
+        .nav-link.active::after {
+          width: 100%;
+        }
+
+        .nav-link:hover::after {
+          width: 100%;
+        }
+
+        .desktop-cta .nav-link {
+          font-weight: 700;
+        }
+
+        @media (max-width: 1024px) {
+          .nav-links { display: none; }
+          .desktop-cta { display: none; }
+          .mobile-menu-btn { display: flex; }
+          .mobile-menu { width: calc(100% - 30px); margin: 8px auto 0; border-radius: 0 0 12px 12px; }
+          .mobile-menu-link { display: block; padding: 11px 16px; color: #0f172a; text-decoration: none; font-weight: 600; }
+          .mobile-menu-link:hover { background: rgba(36,99,235,0.06); }
+        }
+
         @keyframes slideDown {
           from {
             opacity: 0;
