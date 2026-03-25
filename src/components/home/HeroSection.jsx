@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export default function HeroSection() {
   return (
-    <section style={{
+    <section className="hero-section" style={{
       position:'relative', paddingTop:'clamp(80px, 15vw, 160px)', paddingBottom:'clamp(48px, 12vw, 96px)',
       overflow:'hidden', background:'#f8fafc'
     }}>
@@ -208,17 +208,6 @@ export default function HeroSection() {
 
         </div>
       </div>
-
-      {/* Responsive grid adjustment for larger screens */}
-      <style>{`
-        @media (min-width: 768px) {
-          section {
-            display: grid;
-            grid-template-columns: 1fr 1fr !important;
-            gap: 80px !important;
-          }
-        }
-      `}</style>
     </section>
   )
 }
