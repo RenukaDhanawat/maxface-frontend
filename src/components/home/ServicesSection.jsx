@@ -1,14 +1,14 @@
 'use client'
 import Link from 'next/link'
-import { Cog, FlaskConical, Hospital, Tooth, Smile, Mask } from 'lucide-react'
+import { Cog, FlaskConical, Hospital, Stethoscope, Smile, Drama } from 'lucide-react'
 
 const iconComponents = {
   'dental-implants': Cog,
   'endodontics': FlaskConical,
   'surgery': Hospital,
-  'prosthodontics': Tooth,
+  'prosthodontics': Stethoscope,
   'orthodontics': Smile,
-  'maxillofacial-prosthodontics': Mask
+  'maxillofacial-prosthodontics': Drama
 }
 
 const services = [

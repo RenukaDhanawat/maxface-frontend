@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import { Tooth, MapPin, Phone, MessageCircle, Mail, Clock } from 'lucide-react'
+import { Stethoscope, MapPin, Phone, MessageCircle, Mail, Clock } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -19,7 +19,7 @@ export default function Footer() {
                 display:'flex', alignItems:'center', justifyContent:'center',
                 color:'white'
               }}>
-                <Tooth size={20} strokeWidth={2} />
+                <Stethoscope size={20} strokeWidth={2} />
               </div>
   <div>
     <div style={{fontWeight:'900', fontSize:'clamp(14px, 2vw, 16px)', letterSpacing:'-0.5px'}}>
