@@ -11,7 +11,7 @@ export default function HeroSection() {
       <div style={{position:'absolute', top:'-10%', right:'-5%', width:'clamp(300px, 50vw, 600px)', height:'clamp(300px, 50vw, 600px)', borderRadius:'50%', background:'rgba(36,99,235,0.08)', filter:'blur(80px)', pointerEvents:'none'}}/>
       <div style={{position:'absolute', bottom:'10%', right:'15%', width:'clamp(200px, 40vw, 400px)', height:'clamp(200px, 40vw, 400px)', borderRadius:'50%', background:'rgba(20,184,166,0.08)', filter:'blur(60px)', pointerEvents:'none'}}/>
 
-      <div style={{
+      <div className="hero-grid" style={{
         maxWidth:'1280px', margin:'0 auto', padding:'0 clamp(16px, 5vw, 24px)', 
         display:'grid', 
         gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))',

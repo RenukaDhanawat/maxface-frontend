@@ -193,14 +193,27 @@ body {
 }
 
 /* Desktop Layout Fixes */
-@media (min-width: 1024px) {
-  /* Ensure 2-column layouts on desktop */
+@media (min-width: 768px) {
   .hero-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr !important;
   }
-  
   .doctor-card {
-    grid-template-columns: 340px 1fr;
+    grid-template-columns: 340px 1fr !important;
+  }
+  .why-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 1fr !important;
+  }
+  .doctor-card {
+    grid-template-columns: 340px 1fr !important;
+  }
+  .why-grid {
+    grid-template-columns: 1fr 1fr !important;
   }
 }
 

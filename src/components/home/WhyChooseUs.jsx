@@ -4,7 +4,7 @@ import Link from 'next/link'
 export default function WhyChooseUs() {
   return (
     <section style={{padding:'clamp(48px, 10vw, 96px) 16px', background:'white'}}>
-      <div style={{maxWidth:'1280px', margin:'0 auto', display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))', gap:'clamp(48px, 10vw, 96px)', alignItems:'center'}}>
+      <div className="why-grid" style={{maxWidth:'1280px', margin:'0 auto', display:'grid', gridTemplateColumns:'repeat(auto-fit, minmax(300px, 1fr))', gap:'clamp(48px, 10vw, 96px)', alignItems:'center'}}>
 
         {/* Left — Images grid */}
         <div style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'clamp(12px, 3vw, 16px)'}}>

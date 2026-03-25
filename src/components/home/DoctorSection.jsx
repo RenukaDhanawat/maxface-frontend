@@ -24,7 +24,7 @@ export default function DoctorSection() {
         </div>
 
         {/* Main Doctor Card */}
-        <div style={{
+        <div className="doctor-card" style={{
           background:'white', borderRadius:'24px', border:'1px solid #f1f5f9',
           boxShadow:'0 4px 24px rgba(0,0,0,0.06)',
           display:'grid', 
