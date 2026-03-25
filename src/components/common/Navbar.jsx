@@ -74,7 +74,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop Links */}
-        <div className="nav-links">
+        <div className="nav-links hidden lg:flex items-center gap-6">
           {navLinks.map(link => (
             <Link key={link.name} href={link.href} className="nav-link">
               {link.name}
@@ -84,7 +84,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button - with lucide-react icon */}
         <button 
-          className="mobile-menu-btn"
+          className="mobile-menu-btn lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
           style={{
             marginLeft: 'auto',
@@ -106,7 +106,7 @@ export default function Navbar() {
         </button>
 
         {/* CTA - Desktop */}
-        <div style={{display:'flex', alignItems:'center', gap:'8px'}}>
+        <div className="hidden lg:flex items-center gap-2">
           <Link href="/portal" style={{
             color:'#2463eb', fontWeight:'700', fontSize:'clamp(11px, 2vw, 13px)',
             padding:'7px 16px', borderRadius:'9999px',
