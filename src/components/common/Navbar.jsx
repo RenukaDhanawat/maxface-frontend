@@ -87,17 +87,17 @@ export default function Navbar() {
           className="mobile-menu-btn lg:hidden"
           onClick={() => setIsOpen(!isOpen)}
           style={{
-            marginLeft: 'auto',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: '#0f172a',
-            transition: 'transform 0.3s ease'
-          }}
-        >
+          marginLeft: 'auto',
+          background: 'none',
+          border: 'none',
+          cursor: 'pointer',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: '#0f172a',
+          transition: 'transform 0.3s ease'
+      }}
+>
           {isOpen ? (
             <X size={24} strokeWidth={2.5} />
           ) : (
