@@ -1,6 +1,7 @@
 'use client'
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { name:'Services',    href:'/treatments' },
@@ -14,18 +15,37 @@ const navLinks = [
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [isOpen,   setIsOpen]   = useState(false)
+  const [showNavbar, setShowNavbar] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   useEffect(() => {
-    const fn = () => setScrolled(window.scrollY > 20)
-    window.addEventListener('scroll', fn)
-    return () => window.removeEventListener('scroll', fn)
-  }, [])
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY
+      
+      // Show navbar when scrolling up or near top
+      if (currentScrollY < lastScrollY || currentScrollY < 100) {
+        setShowNavbar(true)
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Hide navbar when scrolling down
+        setShowNavbar(false)
+      }
+      
+      setLastScrollY(currentScrollY)
+      setScrolled(currentScrollY > 20)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY])
 
   return (
     <nav style={{
-      position:'fixed', top:'20px', left:'50%',
-      transform:'translateX(-50%)', width:'90%',
-      maxWidth:'1280px', zIndex:50
+      position:'fixed', top:0, left:'50%',
+      transform:`translateX(-50%) translateY(${showNavbar ? '0' : '-120px'})`,
+      width:'90%',
+      maxWidth:'1280px', zIndex:50,
+      transition:'transform 0.3s ease-in-out',
+      marginTop:'20px'
     }}>
       <div style={{
         background:'rgba(255,255,255,0.75)',
@@ -62,13 +82,27 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Menu Button - with lucide-react icon */}
         <button 
           className="mobile-menu-btn"
           onClick={() => setIsOpen(!isOpen)}
-          style={{marginLeft: 'auto'}}
+          style={{
+            marginLeft: 'auto',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            color: '#0f172a',
+            transition: 'transform 0.3s ease'
+          }}
         >
-          {isOpen ? '✕' : '☰'}
+          {isOpen ? (
+            <X size={24} strokeWidth={2.5} />
+          ) : (
+            <Menu size={24} strokeWidth={2.5} />
+          )}
         </button>
 
         {/* CTA - Desktop */}
@@ -99,7 +133,17 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <div className="mobile-menu" style={{width: '100%', position: 'absolute', top: '100%', left: 0, right: 0, borderRadius: '0 0 12px 12px', marginTop: '8px'}}>
+          <div className="mobile-menu" style={{
+            width: '100%', 
+            position: 'absolute', 
+            top: '100%', 
+            left: 0, 
+            right: 0, 
+            borderRadius: '0 0 12px 12px', 
+            marginTop: '8px',
+            animation: 'slideDown 0.3s ease-in-out',
+            zIndex: 40
+          }}>
             {navLinks.map(link => (
               <Link 
                 key={link.name}
@@ -115,11 +159,24 @@ export default function Navbar() {
               Log In
             </Link>
             <Link href="/appointment" className="mobile-menu-link" style={{borderTop: '1px solid #e2e8f0'}}>
-              📞 Book Consultation
+              Book Consultation
             </Link>
           </div>
         )}
       </div>
+      
+      <style>{`
+        @keyframes slideDown {
+          from {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+      `}</style>
     </nav>
   )
 }

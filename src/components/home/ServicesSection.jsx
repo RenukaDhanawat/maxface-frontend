@@ -1,13 +1,23 @@
 'use client'
 import Link from 'next/link'
+import { Cog, FlaskConical, Hospital, Tooth, Smile, Mask } from 'lucide-react'
+
+const iconComponents = {
+  'dental-implants': Cog,
+  'endodontics': FlaskConical,
+  'surgery': Hospital,
+  'prosthodontics': Tooth,
+  'orthodontics': Smile,
+  'maxillofacial-prosthodontics': Mask
+}
 
 const services = [
-  { icon:'biotech',    title:'Dental Implants',           desc:'Advanced Zirconia and Titanium solutions for permanent restoration with 3D-guided surgical placement.', slug:'dental-implants', color:'rgba(20,184,166,0.1)', iconColor:'#14b8a6' },
-  { icon:'psychology', title:'Endodontics',                desc:'Painless root canal treatments using rotary endodontics with single-sitting procedures for rapid relief.', slug:'endodontics', color:'rgba(36,99,235,0.1)', iconColor:'#2463eb' },
-  { icon:'face',       title:'Oral & Maxillofacial Surgery', desc:'Orthognathic corrective procedures to improve breathing, chewing, and facial alignment using virtual planning.', slug:'surgery', color:'rgba(20,184,166,0.1)', iconColor:'#14b8a6' },
-  { icon:'volunteer_activism', title:'Prosthodontics', desc:'Complete dentures, crowns, bridges and advanced prosthetic solutions with precision craftsmanship.', slug:'prosthodontics', color:'rgba(36,99,235,0.1)', iconColor:'#2463eb' },
-  { icon:'straighten', title:'Orthodontics',               desc:'Metal braces, ceramic braces and invisible aligners for perfectly aligned teeth and confident smiles.', slug:'orthodontics', color:'rgba(20,184,166,0.1)', iconColor:'#14b8a6' },
-  { icon:'theater_comedy', title:'Maxillofacial Prosthodontics', desc:'Specialized anaplastology and facial prosthetics — a unique clinical expertise at Maxface Clinic.', slug:'maxillofacial-prosthodontics', color:'rgba(36,99,235,0.1)', iconColor:'#2463eb' },
+  { icon:'dental-implants',    title:'Dental Implants',           desc:'Advanced Zirconia and Titanium solutions for permanent restoration with 3D-guided surgical placement.', slug:'dental-implants', color:'rgba(20,184,166,0.1)', iconColor:'#14b8a6' },
+  { icon:'endodontics', title:'Endodontics',                desc:'Painless root canal treatments using rotary endodontics with single-sitting procedures for rapid relief.', slug:'endodontics', color:'rgba(36,99,235,0.1)', iconColor:'#2463eb' },
+  { icon:'surgery',       title:'Oral & Maxillofacial Surgery', desc:'Orthognathic corrective procedures to improve breathing, chewing, and facial alignment using virtual planning.', slug:'surgery', color:'rgba(20,184,166,0.1)', iconColor:'#14b8a6' },
+  { icon:'prosthodontics', title:'Prosthodontics', desc:'Complete dentures, crowns, bridges and advanced prosthetic solutions with precision craftsmanship.', slug:'prosthodontics', color:'rgba(36,99,235,0.1)', iconColor:'#2463eb' },
+  { icon:'orthodontics', title:'Orthodontics',               desc:'Metal braces, ceramic braces and invisible aligners for perfectly aligned teeth and confident smiles.', slug:'orthodontics', color:'rgba(20,184,166,0.1)', iconColor:'#14b8a6' },
+  { icon:'maxillofacial-prosthodontics', title:'Maxillofacial Prosthodontics', desc:'Specialized anaplastology and facial prosthetics — a unique clinical expertise at Maxface Clinic.', slug:'maxillofacial-prosthodontics', color:'rgba(36,99,235,0.1)', iconColor:'#2463eb' },
 ]
 
 export default function ServicesSection() {
@@ -50,16 +60,12 @@ export default function ServicesSection() {
                 width:'60px', height:'60px', borderRadius:'16px',
                 background: service.color,
                 display:'flex', alignItems:'center', justifyContent:'center',
-                marginBottom:'28px', fontSize:'28px', transition:'transform 0.3s'
+                marginBottom:'28px', transition:'transform 0.3s'
               }}>
-                <span style={{color: service.iconColor}}>
-                  {service.slug === 'dental-implants' && '⚙️'}
-                  {service.slug === 'endodontics' && '🔬'}
-                  {service.slug === 'surgery' && '🏥'}
-                  {service.slug === 'prosthodontics' && '🦷'}
-                  {service.slug === 'orthodontics' && '😁'}
-                  {service.slug === 'maxillofacial-prosthodontics' && '🎭'}
-                </span>
+                {(() => {
+                  const IconComponent = iconComponents[service.slug]
+                  return <IconComponent size={32} strokeWidth={2} color={service.iconColor} />
+                })()}
               </div>
               <h4 style={{fontSize:'clamp(16px, 3vw, 18px)', fontWeight:'700', color:'#0f172a', marginBottom:'12px', letterSpacing:'-0.3px'}}>
                 {service.title}

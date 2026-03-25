@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { AlertCircle, Phone, Calendar, Star, CheckCircle, Trophy } from 'lucide-react'
 
 export default function EmergencySection() {
   return (
@@ -7,8 +8,8 @@ export default function EmergencySection() {
       <section style={{padding:'28px 24px', background:'white', borderTop:'1px solid #fee2e2', borderBottom:'1px solid #fee2e2'}}>
         <div style={{maxWidth:'1280px', margin:'0 auto', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'16px'}}>
           <div style={{display:'flex', alignItems:'center', gap:'14px'}}>
-            <div style={{width:'48px', height:'48px', background:'#fef2f2', borderRadius:'12px', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'22px', flexShrink:0}}>
-              🚨
+            <div style={{width:'48px', height:'48px', background:'#fef2f2', borderRadius:'12px', display:'flex', alignItems:'center', justifyContent:'center', color:'#ef4444', flexShrink:0}}>
+              <AlertCircle size={24} strokeWidth={2.5} />
             </div>
             <div>
               <h3 style={{fontSize:'16px', fontWeight:'700', color:'#0f172a', marginBottom:'2px'}}>Dental Emergency?</h3>
@@ -22,7 +23,8 @@ export default function EmergencySection() {
             boxShadow:'0 4px 12px rgba(239,68,68,0.3)',
             display:'flex', alignItems:'center', gap:'8px', whiteSpace:'nowrap'
           }}>
-            📞 +91 99804 77725
+            <Phone size={16} strokeWidth={2.5} />
+            +91 99804 77725
           </a>
         </div>
       </section>
@@ -39,7 +41,7 @@ export default function EmergencySection() {
 
         <div style={{position:'relative', zIndex:1, maxWidth:'700px', margin:'0 auto'}}>
           <div style={{display:'inline-flex', alignItems:'center', gap:'6px', background:'rgba(255,255,255,0.08)', border:'1px solid rgba(255,255,255,0.12)', color:'rgba(255,255,255,0.8)', padding:'5px 14px', borderRadius:'9999px', fontSize:'11px', fontWeight:'700', letterSpacing:'0.1em', textTransform:'uppercase', marginBottom:'20px'}}>
-            ✦ Start Your Journey
+            <span style={{display:'flex', alignItems:'center', justifyContent:'center'}}>✦</span> Start Your Journey
           </div>
           <h2 style={{fontSize:'clamp(28px, 4vw, 48px)', fontWeight:'900', color:'white', marginBottom:'16px', letterSpacing:'-1.5px', lineHeight:'1.1'}}>
             Ready for Your<br/>
@@ -58,7 +60,8 @@ export default function EmergencySection() {
               boxShadow:'0 8px 24px rgba(36,99,235,0.4)',
               display:'flex', alignItems:'center', gap:'8px'
             }}>
-              📅 Book Appointment
+              <Calendar size={18} strokeWidth={2.5} />
+              Book Appointment
             </Link>
             <a href="tel:+919845655304" style={{
               background:'rgba(255,255,255,0.08)',
@@ -67,21 +70,26 @@ export default function EmergencySection() {
               textDecoration:'none', fontWeight:'600', fontSize:'15px',
               display:'flex', alignItems:'center', gap:'8px'
             }}>
-              📞 +91 98456 55304
+              <Phone size={18} strokeWidth={2.5} />
+              +91 98456 55304
             </a>
           </div>
 
           {/* Trust badges */}
           <div style={{display:'flex', justifyContent:'center', gap:'24px', marginTop:'40px', flexWrap:'wrap'}}>
             {[
-              '⭐ 4.9 Google Rating',
-              '✓ 5,000+ Happy Patients',
-              '🏆 Certified Implantologists',
-            ].map(badge => (
-              <span key={badge} style={{fontSize:'13px', color:'rgba(255,255,255,0.5)', fontWeight:'500'}}>
-                {badge}
-              </span>
-            ))}
+              { icon: Star, text: '4.9 Google Rating' },
+              { icon: CheckCircle, text: '5,000+ Happy Patients' },
+              { icon: Trophy, text: 'Certified Implantologists' },
+            ].map((item, idx) => {
+              const IconComponent = item.icon
+              return (
+                <span key={idx} style={{fontSize:'13px', color:'rgba(255,255,255,0.5)', fontWeight:'500', display:'flex', alignItems:'center', gap:'6px'}}>
+                  <IconComponent size={16} strokeWidth={2} style={{color: 'rgba(255,255,255,0.4)'}} />
+                  {item.text}
+                </span>
+              )
+            })}
           </div>
         </div>
       </section>

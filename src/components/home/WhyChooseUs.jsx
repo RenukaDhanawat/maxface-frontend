@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { Target, Trophy, Gem, Heart } from 'lucide-react'
 
 export default function WhyChooseUs() {
   return (
@@ -39,26 +40,29 @@ export default function WhyChooseUs() {
 
           <div style={{display:'flex', flexDirection:'column', gap:'clamp(20px, 4vw, 28px)', marginBottom:'clamp(24px, 5vw, 40px)'}}>
             {[
-              { icon:'🎯', title:'AI-Guided Precision', desc:'We utilize AI imaging software to map your facial structure with sub-millimeter accuracy before any incision is made.' },
-              { icon:'🏆', title:'Certified Implantologists', desc:'Dr. Srinivasa Rao is internationally certified with expertise in basic to advanced implantology and anaplastology.' },
-              { icon:'💎', title:'Lifetime Guarantee', desc:'We stand by our craftsmanship. Our dental implants come with a lifetime warranty on structural integrity.' },
-              { icon:'❤️', title:'Patient-First Philosophy', desc:'Every treatment plan is personalized. We take time to explain every step and ensure your comfort throughout.' },
-            ].map(item => (
-              <div key={item.title} style={{display:'flex', gap:'16px', alignItems:'flex-start'}}>
-                <div style={{
-                  width:'44px', height:'44px', flexShrink:0,
-                  background:'#f8fafc', borderRadius:'12px',
-                  display:'flex', alignItems:'center', justifyContent:'center',
-                  fontSize:'20px', border:'1px solid #f1f5f9'
-                }}>
-                  {item.icon}
+              { icon: Target, title:'AI-Guided Precision', desc:'We utilize AI imaging software to map your facial structure with sub-millimeter accuracy before any incision is made.' },
+              { icon: Trophy, title:'Certified Implantologists', desc:'Dr. Srinivasa Rao is internationally certified with expertise in basic to advanced implantology and anaplastology.' },
+              { icon: Gem, title:'Lifetime Guarantee', desc:'We stand by our craftsmanship. Our dental implants come with a lifetime warranty on structural integrity.' },
+              { icon: Heart, title:'Patient-First Philosophy', desc:'Every treatment plan is personalized. We take time to explain every step and ensure your comfort throughout.' },
+            ].map(item => {
+              const IconComponent = item.icon
+              return (
+                <div key={item.title} style={{display:'flex', gap:'16px', alignItems:'flex-start'}}>
+                  <div style={{
+                    width:'44px', height:'44px', flexShrink:0,
+                    background:'#f8fafc', borderRadius:'12px',
+                    display:'flex', alignItems:'center', justifyContent:'center',
+                    border:'1px solid #f1f5f9', color:'#2463eb'
+                  }}>
+                    <IconComponent size={24} strokeWidth={2} />
+                  </div>
+                  <div>
+                    <h4 style={{fontSize:'clamp(14px, 2.5vw, 15px)', fontWeight:'700', color:'#0f172a', marginBottom:'4px'}}>{item.title}</h4>
+                    <p style={{fontSize:'clamp(13px, 2vw, 14px)', color:'#64748b', lineHeight:'1.6'}}>{item.desc}</p>
+                  </div>
                 </div>
-                <div>
-                  <h4 style={{fontSize:'clamp(14px, 2.5vw, 15px)', fontWeight:'700', color:'#0f172a', marginBottom:'4px'}}>{item.title}</h4>
-                  <p style={{fontSize:'clamp(13px, 2vw, 14px)', color:'#64748b', lineHeight:'1.6'}}>{item.desc}</p>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
 
           <Link href="/about" style={{

@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { Tooth, MapPin, Phone, MessageCircle, Mail, Clock } from 'lucide-react'
 
 export default function Footer() {
   return (
@@ -10,16 +11,16 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-<div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'20px'}}>
-  <div style={{
-    width:'36px', height:'36px',
-    background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
-    borderRadius:'9px',
-    display:'flex', alignItems:'center', justifyContent:'center',
-    fontSize:'18px'
-  }}>
-    🦷
-  </div>
+            <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'20px'}}>
+              <div style={{
+                width:'36px', height:'36px',
+                background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
+                borderRadius:'9px',
+                display:'flex', alignItems:'center', justifyContent:'center',
+                color:'white'
+              }}>
+                <Tooth size={20} strokeWidth={2} />
+              </div>
   <div>
     <div style={{fontWeight:'900', fontSize:'clamp(14px, 2vw, 16px)', letterSpacing:'-0.5px'}}>
       <span style={{color:'#60a5fa'}}>MAX</span>
@@ -40,8 +41,8 @@ export default function Footer() {
               <a href="https://www.instagram.com/maxface.dental/" target="_blank" rel="noreferrer" style={{width:'36px', height:'36px', background:'linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888)', borderRadius:'8px', display:'flex', alignItems:'center', justifyContent:'center', textDecoration:'none'}}>
                 <img src="https://cdn.simpleicons.org/instagram/white" width="16" height="16" alt="Instagram" />
               </a>
-              <a href="https://wa.me/919980477725" target="_blank" rel="noreferrer" style={{width:'36px', height:'36px', background:'#25D366', borderRadius:'8px', display:'flex', alignItems:'center', justifyContent:'center', textDecoration:'none', fontSize:'18px'}}>
-                💬
+              <a href="https://wa.me/919980477725" target="_blank" rel="noreferrer" style={{width:'36px', height:'36px', background:'#25D366', borderRadius:'8px', display:'flex', alignItems:'center', justifyContent:'center', textDecoration:'none', color:'white'}}>
+                <MessageCircle size={18} strokeWidth={2} fill="currentColor" />
               </a>
             </div>
           </div>
@@ -91,26 +92,26 @@ export default function Footer() {
             </h4>
             <div style={{display:'flex', flexDirection:'column', gap:'14px'}}>
               <div style={{display:'flex', gap:'10px', alignItems:'flex-start'}}>
-                <span style={{fontSize:'16px', flexShrink:0, marginTop:'1px'}}>📍</span>
+                <MapPin size={20} strokeWidth={2} style={{flexShrink:0, marginTop:'-2px', color:'#6b7280'}} />
                 <span style={{color:'#475569', fontSize:'clamp(12px, 2vw, 13px)', lineHeight:'1.6'}}>
                   Reg No 14/268A, 1st Floor, RS Arcade, Kasturi Nagar, Bangalore - 560043
                 </span>
               </div>
-              <div style={{display:'flex', gap:'10px'}}>
-                <span style={{fontSize:'16px'}}>📞</span>
+              <div style={{display:'flex', gap:'10px', alignItems:'flex-start'}}>
+                <Phone size={20} strokeWidth={2} style={{flexShrink:0, marginTop:'-2px', color:'#6b7280'}} />
                 <div>
                   <a href="tel:+919845655304" style={{color:'#475569', textDecoration:'none', fontSize:'clamp(12px, 2vw, 13px)', display:'block'}}>+91 98456 55304</a>
                   <a href="tel:+919980477725" style={{color:'#475569', textDecoration:'none', fontSize:'clamp(12px, 2vw, 13px)', display:'block'}}>+91 99804 77725</a>
                 </div>
               </div>
-              <div style={{display:'flex', gap:'10px'}}>
-                <span style={{fontSize:'16px'}}>📧</span>
+              <div style={{display:'flex', gap:'10px', alignItems:'flex-start'}}>
+                <Mail size={20} strokeWidth={2} style={{flexShrink:0, marginTop:'-2px', color:'#6b7280'}} />
                 <a href="mailto:maxface.in@gmail.com" style={{color:'#475569', textDecoration:'none', fontSize:'clamp(12px, 2vw, 13px)'}}>
                   maxface.in@gmail.com
                 </a>
               </div>
-              <div style={{display:'flex', gap:'10px'}}>
-                <span style={{fontSize:'16px'}}>🕐</span>
+              <div style={{display:'flex', gap:'10px', alignItems:'flex-start'}}>
+                <Clock size={20} strokeWidth={2} style={{flexShrink:0, marginTop:'-2px', color:'#6b7280'}} />
                 <span style={{color:'#475569', fontSize:'clamp(12px, 2vw, 13px)', lineHeight:'1.6'}}>
                   Mon–Sat: 9:00–18:00<br/>
                   Sunday: Emergency Only

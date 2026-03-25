@@ -1,5 +1,6 @@
 'use client'
 import Link from 'next/link'
+import { Phone, CheckCircle, Calendar, Star } from 'lucide-react'
 
 export default function HeroSection() {
   return (
@@ -80,7 +81,8 @@ export default function HeroSection() {
               onMouseEnter={e => { e.currentTarget.style.borderColor = '#dbeafe'; e.currentTarget.style.color = '#2463eb' }}
               onMouseLeave={e => { e.currentTarget.style.borderColor = '#e2e8f0'; e.currentTarget.style.color = '#0f172a' }}
             >
-              📞 +91 99804 77725
+              <Phone size={18} strokeWidth={2.5} />
+              +91 99804 77725
             </a>
           </div>
 
@@ -89,9 +91,9 @@ export default function HeroSection() {
             {[
               { value:'5,000+', label:'Patients Treated' },
               { value:'8+',     label:'Years Experience' },
-              { value:'4.9★',   label:'Google Rating' },
+              { value: <div style={{display:'flex', alignItems:'center', gap:'4px'}}><span>4.9</span><Star size={16} strokeWidth={2.5} fill="currentColor" /></div>, label:'Google Rating' },
             ].map(stat => (
-              <div key={stat.label}>
+              <div key={typeof stat.label === 'string' ? stat.label : 'rating'}>
                 <div style={{fontSize:'clamp(18px, 4vw, 24px)', fontWeight:'900', color:'#0f172a', letterSpacing:'-1px'}}>{stat.value}</div>
                 <div style={{fontSize:'clamp(10px, 2vw, 12px)', color:'#94a3b8', fontWeight:'500', marginTop:'2px'}}>{stat.label}</div>
               </div>
@@ -131,9 +133,7 @@ export default function HeroSection() {
             }
           }} className="hidden md:block">
             <div style={{display:'flex', alignItems:'center', gap:'8px', marginBottom:'6px'}}>
-              <div style={{width:'32px', height:'32px', background:'rgba(20,184,166,0.1)', borderRadius:'8px', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'16px'}}>
-                ✅
-              </div>
+              <CheckCircle size={32} strokeWidth={2} color="#14b8a6" style={{flexShrink: 0}} />
               <span style={{fontWeight:'800', fontSize:'11px', textTransform:'uppercase', letterSpacing:'0.5px', color:'#0f172a'}}>
                 Gold Standard
               </span>
@@ -172,7 +172,7 @@ export default function HeroSection() {
               marginBottom:'10px', display:'flex', alignItems:'center', gap:'10px',
               border:'1px solid #f1f5f9'
             }}>
-              <span style={{fontSize:'18px'}}>📅</span>
+              <Calendar size={20} strokeWidth={2} color="#2463eb" style={{flexShrink: 0}} />
               <div>
                 <div style={{fontSize:'12px', fontWeight:'700', color:'#0f172a'}}>Mon – Sat</div>
                 <div style={{fontSize:'11px', color:'#94a3b8'}}>9:00 AM – 8:00 PM</div>
@@ -201,8 +201,11 @@ export default function HeroSection() {
               display: 'block'
             }
           }} className="hidden md:block">
-            <div style={{fontSize:'22px', fontWeight:'900', letterSpacing:'-1px'}}>4.9 ★</div>
-            <div style={{fontSize:'11px', opacity:0.85, marginTop:'2px'}}>Google Rating</div>
+            <div style={{display:'flex', alignItems:'center', gap:'6px', marginBottom:'4px'}}>
+              <span style={{fontSize:'22px', fontWeight:'900', letterSpacing:'-1px'}}>4.9</span>
+              <Star size={18} strokeWidth={2.5} fill="currentColor" />
+            </div>
+            <div style={{fontSize:'11px', opacity:0.85}}>Google Rating</div>
             <div style={{fontSize:'10px', opacity:0.7}}>500+ reviews</div>
           </div>
 

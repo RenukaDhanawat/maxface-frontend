@@ -1,10 +1,11 @@
 'use client'
 import { useState } from 'react'
+import { Tooth, Send, X } from 'lucide-react'
 
 export default function ChatBot() {
   const [isOpen,   setIsOpen]   = useState(false)
   const [messages, setMessages] = useState([
-    { role:'assistant', text:'👋 Hello! Welcome to Maxface Dental Clinic. I\'m your AI dental assistant. How can I help you today?' }
+    { role:'assistant', text:'Hello! Welcome to Maxface Dental Clinic. I\'m your AI dental assistant. How can I help you today?' }
   ])
   const [input,    setInput]    = useState('')
   const [loading,  setLoading]  = useState(false)
@@ -75,13 +76,13 @@ export default function ChatBot() {
                 backdropFilter:'blur(10px)',
                 border:'1px solid rgba(255,255,255,0.25)',
                 display:'flex', alignItems:'center', justifyContent:'center',
-                position:'relative', overflow:'hidden'
+                position:'relative', overflow:'hidden', color:'white'
               }}>
                 <div style={{
                   position:'absolute', inset:0,
                   background:'linear-gradient(135deg, rgba(255,255,255,0.2), rgba(255,255,255,0.05))'
                 }}/>
-                <span style={{fontSize:'22px', position:'relative', zIndex:1}}>🦷</span>
+                <Tooth size={24} strokeWidth={2} style={{position:'relative', zIndex:1}} />
               </div>
               <div>
                 <div style={{color:'white', fontWeight:'800', fontSize:'15px', letterSpacing:'-0.3px'}}>
@@ -96,14 +97,15 @@ export default function ChatBot() {
             <button onClick={() => setIsOpen(false)} style={{
               background:'rgba(255,255,255,0.15)', border:'1px solid rgba(255,255,255,0.2)',
               color:'white', width:'32px', height:'32px', borderRadius:'50%',
-              cursor:'pointer', fontSize:'14px', fontWeight:'700',
+              cursor:'pointer',
               display:'flex', alignItems:'center', justifyContent:'center',
-              transition:'all 0.2s', position:'relative', zIndex:1
+              transition:'all 0.2s', position:'relative', zIndex:1,
+              padding:0
             }}
               onMouseEnter={e => e.currentTarget.style.background = 'rgba(255,255,255,0.25)'}
               onMouseLeave={e => e.currentTarget.style.background = 'rgba(255,255,255,0.15)'}
             >
-              ✕
+              <X size={18} strokeWidth={2.5} />
             </button>
           </div>
 
@@ -124,9 +126,10 @@ export default function ChatBot() {
                     width:'28px', height:'28px', borderRadius:'8px', flexShrink:0,
                     background:'linear-gradient(135deg, #2463eb, #0ea5e9)',
                     display:'flex', alignItems:'center', justifyContent:'center',
-                    fontSize:'14px', boxShadow:'0 2px 8px rgba(36,99,235,0.2)'
+                    color:'white',
+                    boxShadow:'0 2px 8px rgba(36,99,235,0.2)'
                   }}>
-                    🦷
+                    <Tooth size={14} strokeWidth={2.5} />
                   </div>
                 )}
                 <div style={{
@@ -149,8 +152,8 @@ export default function ChatBot() {
             ))}
             {loading && (
               <div style={{display:'flex', justifyContent:'flex-start', alignItems:'flex-end', gap:'8px'}}>
-                <div style={{width:'28px', height:'28px', borderRadius:'8px', background:'linear-gradient(135deg, #2463eb, #0ea5e9)', display:'flex', alignItems:'center', justifyContent:'center', fontSize:'14px'}}>
-                  🦷
+                <div style={{width:'28px', height:'28px', borderRadius:'8px', background:'linear-gradient(135deg, #2463eb, #0ea5e9)', display:'flex', alignItems:'center', justifyContent:'center', color:'white'}}>
+                  <Tooth size={14} strokeWidth={2.5} />
                 </div>
                 <div style={{background:'white', padding:'12px 16px', borderRadius:'16px', borderBottomLeftRadius:'4px', border:'1px solid #f1f5f9', boxShadow:'0 2px 8px rgba(0,0,0,0.06)'}}>
                   <div style={{display:'flex', gap:'4px', alignItems:'center'}}>

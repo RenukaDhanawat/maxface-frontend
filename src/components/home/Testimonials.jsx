@@ -1,7 +1,6 @@
 'use client'
 import { useState } from 'react'
-
-const testimonials = [
+import { Star, ChevronLeft, ChevronRight } from 'lucide-react'
   {
     name:'Chandrakala Jayanthi',
     initials:'CJ',
@@ -88,22 +87,28 @@ export default function Testimonials() {
               width:'44px', height:'44px', borderRadius:'50%',
               border:'1px solid rgba(255,255,255,0.15)',
               background:'rgba(255,255,255,0.05)',
-              color:'white', fontSize:'18px', cursor:'pointer',
-              transition:'all 0.2s', display:'flex', alignItems:'center', justifyContent:'center'
+              color:'white', cursor:'pointer',
+              transition:'all 0.2s', display:'flex', alignItems:'center', justifyContent:'center',
+              padding:0
             }}
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.12)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)' }}
-            >←</button>
+            >
+              <ChevronLeft size={20} strokeWidth={2.5} />
+            </button>
             <button onClick={next} style={{
               width:'44px', height:'44px', borderRadius:'50%',
               border:'1px solid rgba(255,255,255,0.15)',
               background:'rgba(255,255,255,0.05)',
-              color:'white', fontSize:'18px', cursor:'pointer',
-              transition:'all 0.2s', display:'flex', alignItems:'center', justifyContent:'center'
+              color:'white', cursor:'pointer',
+              transition:'all 0.2s', display:'flex', alignItems:'center', justifyContent:'center',
+              padding:0
             }}
               onMouseEnter={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.12)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.3)' }}
               onMouseLeave={e => { e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)' }}
-            >→</button>
+            >
+              <ChevronRight size={20} strokeWidth={2.5} />
+            </button>
           </div>
         </div>
 
@@ -143,7 +148,7 @@ export default function Testimonials() {
                 {/* Stars */}
                 <div style={{display:'flex', gap:'3px', marginBottom:'16px'}}>
                   {[...Array(item.rating)].map((_, i) => (
-                    <span key={i} style={{color:'#fbbf24', fontSize:'15px'}}>★</span>
+                    <Star key={i} size={16} strokeWidth={2.5} color="#fbbf24" fill="#fbbf24" />
                   ))}
                 </div>
 
@@ -222,7 +227,7 @@ export default function Testimonials() {
             <span style={{color:'white', fontWeight:'800', fontSize:'15px'}}>4.9</span>
             <div style={{display:'flex', gap:'2px'}}>
               {[...Array(5)].map((_, i) => (
-                <span key={i} style={{color:'#fbbf24', fontSize:'14px'}}>★</span>
+                <Star key={i} size={14} strokeWidth={2.5} color="#fbbf24" fill="#fbbf24" />
               ))}
             </div>
             <span style={{color:'rgba(255,255,255,0.4)', fontSize:'13px'}}>· 500+ verified reviews on Google</span>
